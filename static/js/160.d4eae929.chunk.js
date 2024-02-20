@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[160],{160:function(e,n,r){r.r(n),r.d(n,{default:function(){return a}});r(7313);var t={root:"Gallery_root__is140"},u=r(6417);function a(){return(0,u.jsx)("div",{className:t.root,children:"index"})}}}]);
