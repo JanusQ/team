@@ -1,35 +1,35 @@
-import React, { Suspense } from "react"
-import { Outlet } from "react-router-dom"
+import React, { Suspense } from 'react'
+import { Outlet } from 'react-router-dom'
 
-import Header from "./components/Header"
-import Content from "./components/Content"
-import Footer from "./components/Footer"
+import Header from './components/Header'
+import Content from './components/Content'
+import Footer from './components/Footer'
 import styles from './index.module.scss'
 export default function Layout() {
   const menus = [
     {
-      label: "About",
-      path: "/home",
+      label: 'About',
+      path: '/team',
     },
     {
-      label: "News",
-      path: "/news",
+      label: 'News',
+      path: '/news',
     },
     {
-      label: "Publications",
-      path: "/publications",
+      label: 'Publications',
+      path: '/publications',
     },
     // {
     //   label: "Blog",
     //   path: "/blog",
     // },
     {
-      label: "Course",
-      path: "/course",
+      label: 'Course',
+      path: '/course',
     },
     {
-      label: "Awards",
-      path: "/awards",
+      label: 'Awards',
+      path: '/awards',
     },
     // {
     //   label: "Talks",
@@ -40,8 +40,8 @@ export default function Layout() {
     //   path: "/media",
     // },
     {
-      label: "Team",
-      path: "/team",
+      label: 'Team',
+      path: '/team',
     },
     // {
     //   label: "Gallery",

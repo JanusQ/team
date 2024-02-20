@@ -1,12 +1,7 @@
 import React, { useRef, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import { Mousewheel, Pagination, EffectCards } from 'swiper'
 import tinyml from '@/assets/image/about/tinyml-large.png'
 import styles from './index.module.scss'
 import { Radio } from 'antd'
-import { click } from '@testing-library/user-event/dist/click'
 
 export default function Blog() {
   const researchList = [

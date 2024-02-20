@@ -1,14 +1,14 @@
-import React from "react"
-import { Button, Result } from "antd"
-import { useNavigate } from "react-router-dom"
+import React from 'react'
+import { Button, Result } from 'antd'
+import { useNavigate } from 'react-router-dom'
 // import { HOME_URL } from "@/config/config";
-import "./index.scss"
+import './index.scss'
 
 const NotFound = () => {
   const navigate = useNavigate()
   const goHome = () => {
     // navigate("/home")
-    window.location.href = "/home"
+    window.location.href = '/team/'
   }
   return (
     <Result
