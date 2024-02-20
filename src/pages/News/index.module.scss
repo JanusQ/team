@@ -1,0 +1,30 @@
+.root {
+  :global {
+    min-height: 900px;
+    .news {
+      margin-bottom: 60px;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding: 50px;
+
+      .news_item {
+        display: flex;
+        font-size: 22px;
+        list-style: circle;
+        transition: transform 0.5s;
+        &:hover {
+          transform: scale(1.05);
+        }
+        .news_time {
+          padding: 10px;
+        }
+        .news_title {
+          padding: 10px;
+          .news_title_link {
+            text-decoration: solid;
+          }
+        }
+      }
+    }
+  }
+}
