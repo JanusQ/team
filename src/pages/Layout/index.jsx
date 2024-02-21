@@ -9,7 +9,7 @@ export default function Layout() {
   const menus = [
     {
       label: 'About',
-      path: '/team',
+      path: '/home',
     },
     {
       label: 'News',

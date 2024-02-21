@@ -10,10 +10,10 @@ export const UserLayoutRouter = [
     children: [
       {
         path: '/',
-        element: <Navigate to="/team" />,
+        element: <Navigate to="/home" />,
       },
       {
-        path: '/team',
+        path: '/home',
         element: <About />,
       },
       {

@@ -1,16 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./index.module.scss";
-import { Avatar } from "antd";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styles from './index.module.scss'
+import { Avatar } from 'antd'
 
 export default function Member({ memberData, width }) {
   return (
     <div style={{ width: `${width}%` }} className={styles.root}>
       <div className="team_content">
         <div className="team_content_left">
-          <Link to="/memberDetail" state={{name:memberData.name}}>
+          <Link to="/memberDetail" state={{ name: memberData.name }}>
             <Avatar
-              size={70}
+              size={65}
               src={<img src={memberData.photo} alt="avatar" />}
             />
           </Link>
@@ -21,5 +21,5 @@ export default function Member({ memberData, width }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
