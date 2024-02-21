@@ -1,1 +1,0 @@
-import{j as e}from"./index-C-XWbnuQ.js";const s="_root_28vc5_1",r={root:s};function a(){return e.jsx("div",{className:r.root,children:e.jsxs("div",{className:"header_image",children:[e.jsx("h1",{className:"hero-heading",children:"Efficient AI Computing,"}),e.jsx("h1",{className:"hero-heading",children:"Transforming the Future."})]})})}export{a as H};
