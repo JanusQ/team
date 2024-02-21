@@ -11,25 +11,25 @@ import Member from './component/Member/Member'
 export default function Team() {
   const teamList = [
     {
-      name: 'jianweiyin',
+      name: 'Jianwei Yin',
       photo: jianweiyin,
       introduce:
         'Jianwei Yin is currently a full professor in the College of Computer Science, Zhejiang University (ZJU), China. He haspublished more than 100 papers in top international journals and conferences. His current research interests include quantum computing, service computing and business process management. He is also the Associate Editor of the IEEE Transactions on Services Computing.',
     },
     {
-      name: 'liqianglu',
+      name: 'Liqiang Lu',
       photo: liqianglu,
       introduce:
         'Liqiang Lu is a ZJU100 Young Professor in the College of Computer Science, Zhejiang University (ZJU), China. His research interests include quantum computing, computer architecture, deep learning accelerator, and software-hardware codesign. He has authored more than 20 scientific publications in premier international journals and conferences in related  domains, including ISCA, MICRO, HPCA, FCCM, DAC, IEEE Micro, and TCAD. He also serves as a TPC member in the premier conferences in the related domain,including ICCAD,FPT,HPCC etc. ',
     },
     {
-      name: 'tansiwei',
+      name: 'Siwei Tan',
       photo: tansiwei,
       introduce:
         'Siwei Tan is a 5th year PhD student at Zhejiang University. His interests include the quantum algorithm and computer architecture. Wuwei Tian is a 4th year PhD student at Zhejiang  University.',
     },
     {
-      name: 'wuweitian',
+      name: 'Wuwei Tian',
       photo: wuweitian,
       introduce:
         'Wuwei Tian is a 4th year PhD student at Zhejiang University. He is interested in the compiler design and quantum hardware.',

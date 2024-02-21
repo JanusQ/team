@@ -350,7 +350,7 @@ export default function About() {
         <div className="we_work_on">
           <h1 className="we_work_on_title big_title">{titleList[0]}</h1>
           <div className="we_work_on_content">
-            <div className="we_work_on_content_left content_font">
+            {/* <div className="we_work_on_content_left content_font">
               <div className="text">
                 {researchLists[showResearchIndex].content}
               </div>
@@ -374,16 +374,16 @@ export default function About() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
+            {researchLists.map((item, index) => (
+              <div className="we_work_on_content_item" key={index}>
+                <div className="we_work_on_title">{item.title}</div>
+                <div className="we_work_on_research content_font">
+                  {item.content}
+                </div>
+              </div>
+            ))}
           </div>
-          <Radio.Group
-            size="large"
-            options={options}
-            onChange={onChange4}
-            value={value}
-            optionType="button"
-            buttonStyle="solid"
-          />
         </div>
         <div className="news">
           <div className="news_title big_title">News</div>

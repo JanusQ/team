@@ -61,7 +61,7 @@ export default function Footer() {
                     to="/memberDetail"
                     state={{ name: 'jianweiyin' }}
                   >
-                    <p>jianweiyin</p>
+                    <p>Jianwei Yin</p>
                   </Link>
                   <p>
                     <a
