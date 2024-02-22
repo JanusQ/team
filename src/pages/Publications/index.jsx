@@ -8,6 +8,7 @@ import paper1 from '@/assets/image/about/paper1.png'
 import paper2 from '@/assets/image/about/paper2.png'
 import paper3 from '@/assets/image/about/paper3.png'
 import paper4 from '@/assets/image/about/paper4.png'
+import { Row, Col } from 'antd'
 export default function Publications() {
   const { lang } = useLangStore()
 
@@ -267,61 +268,73 @@ export default function Publications() {
   return (
     <div className={styles.root}>
       <HeaderImage />
-      <div className="publication_container">
-        <div className="publication_title big_title"></div>
-        <div className="Publications">
-          <div className="Publications_title taiyuanColor">{titleList[0]}</div>
-          <div className="Publications_content">
-            {PublicationsList.map((item, index) => (
-              <Link
-                key={index}
-                state={{ detail: item }}
-                to="/achievementDetail"
-                style={{ color: '#000' }}
-              >
-                <div key={index} className="Publications_item">
-                  {/* <a href={}></a> */}
-                  <div className="Publications_item_title">{item.title}</div>
-                  <div className="Publications_item_author">{item.author}</div>
-                  <div className="Publications_item_place">{item.place}</div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-        <div className="Patents">
-          <div className="Patents_title Publications_title taiyuanColor">
-            {titleList[1]}
-          </div>
-          <div className="Patents_content">
-            {PatentsList.map((item, index) => (
-              <div key={index} className="Patents_item Publications_item">
-                <div className="Patents_item_title Publications_item_title">
-                  {item.title}
-                </div>
-                <div className="Patents_item_authon">{item.author}</div>
-                <div className="Patents_item_time">{item.time}</div>
+      <Row justify={'center'}>
+        <Col span={14}>
+          <div className="publication_container">
+            <div className="publication_title big_title"></div>
+            <div className="Publications">
+              <div className="Publications_title taiyuanColor">
+                {titleList[0]}
               </div>
-            ))}
-          </div>
-        </div>
-        <div className="Copyright ">
-          <div className="Copyright_title Publications_title taiyuanColor">
-            {titleList[2]}
-          </div>
-          <div className="Copyright_contetn">
-            {CopyrightList.map((item, index) => (
-              <div key={index} className="Copyright_item Publications_item">
-                <div className="Copyright_item_title Publications_item_title">
-                  {item.title}
-                </div>
-                <div className="Copyright_item_authon">{item.author}</div>
-                <div className="Copyright_item_time">{item.time}</div>
+              <div className="Publications_content">
+                {PublicationsList.map((item, index) => (
+                  <Link
+                    key={index}
+                    state={{ detail: item }}
+                    to="/achievementDetail"
+                    style={{ color: '#000' }}
+                  >
+                    <div key={index} className="Publications_item">
+                      {/* <a href={}></a> */}
+                      <div className="Publications_item_title">
+                        {item.title}
+                      </div>
+                      <div className="Publications_item_author">
+                        {item.author}
+                      </div>
+                      <div className="Publications_item_place">
+                        {item.place}
+                      </div>
+                    </div>
+                  </Link>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="Patents">
+              <div className="Patents_title Publications_title taiyuanColor">
+                {titleList[1]}
+              </div>
+              <div className="Patents_content">
+                {PatentsList.map((item, index) => (
+                  <div key={index} className="Patents_item Publications_item">
+                    <div className="Patents_item_title Publications_item_title">
+                      {item.title}
+                    </div>
+                    <div className="Patents_item_authon">{item.author}</div>
+                    <div className="Patents_item_time">{item.time}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="Copyright ">
+              <div className="Copyright_title Publications_title taiyuanColor">
+                {titleList[2]}
+              </div>
+              <div className="Copyright_contetn">
+                {CopyrightList.map((item, index) => (
+                  <div key={index} className="Copyright_item Publications_item">
+                    <div className="Copyright_item_title Publications_item_title">
+                      {item.title}
+                    </div>
+                    <div className="Copyright_item_authon">{item.author}</div>
+                    <div className="Copyright_item_time">{item.time}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </Col>
+      </Row>
     </div>
   )
 }

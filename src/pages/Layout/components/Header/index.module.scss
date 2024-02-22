@@ -24,8 +24,8 @@
       z-index: 999;
       .headerContent {
         height: 100%;
-        width: 52%;
-        min-width: 654px;
+        width: 100%;
+        // min-width: 654px;
         .logo_content {
           display: flex;
           align-items: center;
@@ -41,27 +41,27 @@
             font-family: Lato;
           }
         }
-      }
-      .menuContent {
-        // height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: right;
-        @media screen and (max-width: 780px) {
-          visibility: hidden;
-        }
-        .menu_item {
-          color: black;
-          font-family: Lato;
-          padding: 10px;
-          font-weight: 900;
-          font-size: 16px;
-          &:hover {
+        .menuContent {
+          // height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: right;
+          @media screen and (max-width: 780px) {
+            visibility: hidden;
+          }
+          .menu_item {
+            color: black;
+            font-family: Lato;
+            padding: 10px;
+            font-weight: 900;
+            font-size: 16px;
+            &:hover {
+              color: rgb(0, 63, 136);
+            }
+          }
+          .path_active {
             color: rgb(0, 63, 136);
           }
-        }
-        .path_active {
-          color: rgb(0, 63, 136);
         }
       }
     }

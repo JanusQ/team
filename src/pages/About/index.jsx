@@ -7,7 +7,7 @@ import paper2 from '@/assets/image/about/paper2.png'
 import paper3 from '@/assets/image/about/paper3.png'
 import paper4 from '@/assets/image/about/paper4.png'
 import '@/assets/styles/common.scss'
-import { Radio } from 'antd'
+import { Row, Col } from 'antd'
 import { useLangStore } from '@/store/lang'
 export default function About() {
   const { lang } = useLangStore()
@@ -341,86 +341,73 @@ export default function About() {
         <h1 className="hero-heading">Transforming the Future.</h1>
       </div>
       <div className="about_container">
-        <div className="who_we_are">
-          <h1 className="who_we_are_title big_title">{whoAreWe.title}</h1>
-          <div className="who_we_are_content content_font">
-            {whoAreWe.content}
-          </div>
-        </div>
-        <div className="we_work_on">
-          <h1 className="we_work_on_title big_title">{titleList[0]}</h1>
-          <div className="we_work_on_content">
-            {/* <div className="we_work_on_content_left content_font">
-              <div className="text">
-                {researchLists[showResearchIndex].content}
+        <Row justify="center">
+          <Col span={14}>
+            <div className="who_we_are">
+              <h1 className="who_we_are_title big_title">{whoAreWe.title}</h1>
+              <div className="who_we_are_content content_font">
+                {whoAreWe.content}
               </div>
             </div>
-            <div className="we_work_on_content_right">
-              {researchLists.map((item, index) => (
-                <div
-                  // onClick={clickimg}
-                  key={index}
-                  className="SwiperSlide_content moveDown"
-                  style={{ top: index * 80 }}
-                >
-                  <div
-                    className="title"
-                    style={{ backgroundColor: item.titleColor }}
-                  >
-                    {item.title}
+            <div className="we_work_on">
+              <h1 className="we_work_on_title big_title">{titleList[0]}</h1>
+              <div className="we_work_on_content">
+                {researchLists.map((item, index) => (
+                  <div className="we_work_on_content_item" key={index}>
+                    <div className="we_work_on_title">{item.title}</div>
+                    <div className="we_work_on_research content_font">
+                      {item.content}
+                    </div>
                   </div>
-                  <div className="img_content">
-                    <img src={item.image} alt="" />
-                  </div>
-                </div>
-              ))}
-            </div> */}
-            {researchLists.map((item, index) => (
-              <div className="we_work_on_content_item" key={index}>
-                <div className="we_work_on_title">{item.title}</div>
-                <div className="we_work_on_research content_font">
-                  {item.content}
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-        <div className="news">
-          <div className="news_title big_title">News</div>
+            </div>
+            <div className="news">
+              <div className="news_text big_title">News</div>
 
-          <ul className="news_content">
-            {newsList.map((item, index) => (
-              <li className="news_item" key={index}>
-                <div className="news_time">{item.time}</div>
-                <a className="news_title_link" href={item.link} target="_blank">
-                  <div className="news_title">{item.title}</div>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="paper">
-          <div className="paper_title big_title">{titleList[1]}</div>
-          <div className="paper_content">
-            {paperList.map((item, index) => (
-              <Link
-                key={index}
-                style={{ width: '50%' }}
-                state={{ detail: item }}
-                to="/achievementDetail"
-              >
-                <div className="paper_contetn_item">
-                  <div className="paper_image_content">
-                    <img className="paper_image" src={item.paperimape} alt="" />
-                  </div>
-                  <div className="paper_title">{item.title}</div>
-                  <div className="paper_place">{item.place}</div>
-                  {/* <div className="paper_contetn">{item.content}</div> */}
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
+              <ul className="news_content">
+                {newsList.map((item, index) => (
+                  <li className="news_item" key={index}>
+                    <div className="news_time">{item.time}</div>
+                    <a
+                      className="news_title_link"
+                      href={item.link}
+                      target="_blank"
+                    >
+                      <div className="news_title">{item.title}</div>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="paper">
+              <div className="paper_title big_title">{titleList[1]}</div>
+              <div className="paper_content">
+                {paperList.map((item, index) => (
+                  <Link
+                    key={index}
+                    style={{ width: '50%' }}
+                    state={{ detail: item }}
+                    to="/achievementDetail"
+                  >
+                    <div className="paper_contetn_item">
+                      <div className="paper_image_content">
+                        <img
+                          className="paper_image"
+                          src={item.paperimape}
+                          alt=""
+                        />
+                      </div>
+                      <div className="paper_title">{item.title}</div>
+                      <div className="paper_place">{item.place}</div>
+                      {/* <div className="paper_contetn">{item.content}</div> */}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </Col>
+        </Row>
       </div>
     </div>
   )

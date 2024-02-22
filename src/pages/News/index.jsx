@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styles from './index.module.scss'
 import HeaderImage from '@/components/HeaderImage'
 import '@/assets/styles/common.scss'
-import { Select, Space } from 'antd'
+import { Select, Space, Row, Col } from 'antd'
 import { useLangStore } from '@/store/lang'
 
 export default function News() {
@@ -76,7 +76,9 @@ export default function News() {
       setNewsList(newToOldZh)
     }
   }
-
+  // <Row justify={'center'}>
+  //         <Col span={14}></Col>
+  //       </Row>
   const [newsList, setNewsList] = useState(newToOldZh)
   useEffect(() => {
     if (sort && lang === 'zh') {
@@ -95,37 +97,45 @@ export default function News() {
   return (
     <div className={styles.root}>
       <HeaderImage />
-      <div className="news">
-        <div className="news_title big_title">News</div>
-        <Select
-          defaultValue="Date(Newst to Oldest)"
-          onChange={handleChange}
-          style={{
-            width: '100%',
-            margin: '20px 0 30px 0',
-          }}
-          options={[
-            {
-              value: 0,
-              label: 'Date(Newst to Oldest)',
-            },
-            {
-              value: 1,
-              label: 'Date(Oldest to  Newst )',
-            },
-          ]}
-        />
-        <ul className="news_content">
-          {newsList.map((item, index) => (
-            <li className="news_item" key={index}>
-              <div className="news_time">{item.time}</div>
-              <a className="news_title_link" href={item.link} target="_blank">
-                <div className="news_title">{item.title}</div>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Row justify={'center'}>
+        <Col span={14}>
+          <div className="news">
+            <div className="news_title big_title">News</div>
+            <Select
+              defaultValue="Date(Newst to Oldest)"
+              onChange={handleChange}
+              style={{
+                width: '100%',
+                margin: '20px 0 30px 0',
+              }}
+              options={[
+                {
+                  value: 0,
+                  label: 'Date(Newst to Oldest)',
+                },
+                {
+                  value: 1,
+                  label: 'Date(Oldest to  Newst )',
+                },
+              ]}
+            />
+            <ul className="news_content">
+              {newsList.map((item, index) => (
+                <li className="news_item" key={index}>
+                  <div className="news_time">{item.time}</div>
+                  <a
+                    className="news_title_link"
+                    href={item.link}
+                    target="_blank"
+                  >
+                    <div className="news_title">{item.title}</div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Col>
+      </Row>
     </div>
   )
 }

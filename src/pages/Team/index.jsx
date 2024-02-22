@@ -8,6 +8,8 @@ import liqianglu from '@/assets/image/team/liqianglu.png'
 import tansiwei from '@/assets/image/team/tansiwei.png'
 import wuweitian from '@/assets/image/team/wuweitian.png'
 import Member from './component/Member/Member'
+import { Row, Col } from 'antd'
+
 export default function Team() {
   const teamList = [
     {
@@ -38,19 +40,23 @@ export default function Team() {
   return (
     <div className={styles.root}>
       <HeaderImage />
-      <div className="team_container">
-        <div className="team_title big_title"> Team</div>
-        <Divider />
-        <h2 className="leader">Principle Investigator</h2>
-        <Member memberData={teamList[0]} />
-        <Divider />
-        <h1 style={{ margin: '20px 0px' }}>Team Members</h1>
-        <Member memberData={teamList[1]} width={50} />
-        <div className="member_content">
-          <Member memberData={teamList[2]} width={50} />
-          <Member memberData={teamList[3]} width={50} />
-        </div>
-      </div>
+      <Row justify={'center'}>
+        <Col span={14}>
+          <div className="team_container">
+            <div className="team_title big_title"> Team</div>
+            <Divider />
+            <h2 className="leader">Principle Investigator</h2>
+            <Member memberData={teamList[0]} />
+            <Divider />
+            <h1 style={{ margin: '20px 0px' }}>Team Members</h1>
+            <Member memberData={teamList[1]} width={50} />
+            <div className="member_content">
+              <Member memberData={teamList[2]} width={50} />
+              <Member memberData={teamList[3]} width={50} />
+            </div>
+          </div>
+        </Col>
+      </Row>
     </div>
   )
 }

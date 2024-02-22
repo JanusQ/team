@@ -1,19 +1,20 @@
 .root {
   :global {
+    min-height: 921px;
     // height: 800px;
     // background-color: skyblue;
     .AchievementDetail_container {
-      width: 80%;
-      margin: 0 auto;
+      // width: 80%;
+      margin: 50px 0;
       .paper_title_content {
-        height: 200px;
+        // height: 200px;
+        padding: 30px;
         background-color: rgb(18, 54, 94);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         color: #fff;
-
 
         h1 {
           text-align: center;
@@ -30,7 +31,7 @@
           line-height: 1.23em;
         }
       }
-      .paper_button{
+      .paper_button {
         height: 50px;
         width: 100%;
         line-height: 50px;
@@ -38,34 +39,32 @@
         font-size: 20px;
         font-weight: 600;
         cursor: pointer;
-        a{
+        a {
           text-decoration: none;
           color: #000;
         }
       }
-      .Abstract{
+      .Abstract {
         margin-top: 20px;
         margin-bottom: 10px;
         font-size: 32px;
         font-weight: 700;
         line-height: 36px;
-    
       }
-      .Abstract_content{
+      .Abstract_content {
         text-align: justify;
         font-size: 1.125rem;
         font-weight: 400;
         line-height: 1.5em;
-    
       }
-      .Team_embers{
+      .Team_embers {
         margin-top: 30px;
         margin-bottom: 20px;
         font-size: 18px;
         line-height: 24px;
         font-weight: 600;
       }
-      .member{
+      .member {
         margin-bottom: 50px;
       }
     }
