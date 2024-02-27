@@ -2,3 +2,16 @@
   font-family: Lato;
   src: url("./Lato-Regular.ttf");
 }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./OpenSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'Open Sans ExtraBold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./OpenSansExtraBold.ttf');
+}
+

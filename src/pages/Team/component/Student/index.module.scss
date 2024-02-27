@@ -1,0 +1,24 @@
+.root {
+  :global {
+    .student_container {
+      display: flex;
+      .student_container_left {
+        .avatar {
+          width: 64px;
+          height: 84px;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .student_container_right {
+        font-weight: 600;
+        font-size: 18px;
+        margin-left: 10px;
+        .grad {
+          font-weight: normal;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,7 @@
 .root {
   :global {
-    // margin: 50px 5%;
     margin-bottom: 100px;
     .team_container {
-      // width: 60%;
       margin: 50px 0;
       .team_title {
         margin: 50px 0;
@@ -13,9 +11,33 @@
         font-weight: 700;
         margin-top: 30px;
       }
+      .member_type_phd {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
       .member_content {
         display: flex;
+        flex-wrap: wrap;
         margin-top: 20px;
+        // width: 50%;
+        a {
+          width: 225px;
+          max-width: 225px;
+          color: #000;
+          flex: 0 0 calc(50% - 100px); /* Each item takes 50% width */
+          box-sizing: border-box;
+          padding: 10px;
+          margin: 10px;
+          border: 1px solid #ccc;
+          cursor: pointer;
+        }
+        .item_content {
+          // width: 50%;
+          // padding: 10px;
+          // border: 1px solid #ccc;
+        }
       }
     }
   }

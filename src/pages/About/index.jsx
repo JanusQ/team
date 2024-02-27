@@ -18,7 +18,7 @@ export default function About() {
       '太元量子计算课题组是来自浙大计算机系的量子计算团队，课题组是一个高效、活力的团队，致力于实现面向未来的量子计算的软件和体系结构。我们在超导量子控制系统、量子编译器和量子算法等领域处于国际前沿水平，将不断超越，推动量子计算的能力边界。',
   }
   const whoAreWeEn = {
-    title: 'Who Are We',
+    title: 'Who We Are',
     content:
       'The Taiyuan Quantum Computing Research Group is a quantum computing team from the College of Computer Science and Technology at Zhejiang University. This research group is an efficient and dynamic team dedicated to developing software and architecture for future-oriented quantum computing. We are at the forefront of international research in fields such as superconducting quantum control systems, quantum compilers, and quantum algorithms, constantly striving to surpass boundaries and advance the capabilities of quantum computing.',
   }

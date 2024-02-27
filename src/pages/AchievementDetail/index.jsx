@@ -9,7 +9,7 @@ export default function AchievementDetail() {
   const {
     state: { detail },
   } = useLocation()
-  console.log(detail, 99)
+  // console.log(detail, 99)
   return (
     <div className={styles.root}>
       <Row justify={'center'}>

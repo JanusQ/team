@@ -2,60 +2,67 @@
   :global {
     // height: 800px;
     // background-color: skyblue;
+    min-height: 900px;
     .memberDetail_container {
       width: 70%;
       margin: 0 auto;
       .MemberDetail_content {
         display: flex;
         .MemberDetail_left {
-          margin-right: 10px;
-          .ant-avatar img {
-            height: 128%;
+          margin-right: 30px;
+          .avatar {
+            width: 128px;
+            height: 168px;
+            object-fit: cover;
+            object-position: center;
           }
         }
         .MemberDetail_right {
+          .type {
+            font-size: 18px;
+            line-height: 24px;
+          }
           .member_name {
             font-weight: 800;
           }
           .introduce {
-            margin-top: 20px;
+            // margin-top: 20px;
             font-size: 16px;
-            line-height: 24px;
+            line-height: 30px;
           }
+        }
+        .weight_title {
+          font-size: 18px;
+          font-weight: 700;
+          margin-right: 10px;
         }
       }
-      .projects_title {
-        margin: 50px 20px;
+      .memberData_title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
       }
-      .projects_content {
-        transition: transform 0.5s;
-        &:hover {
-          transform: scale(1.05);
+      .Publications_content {
+        font-family: Open Sans, sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        .Publications_item {
+          text-align: justify;
         }
-        .projects_content_left {
-          // height: 240px;
-          width: 100%;
-          padding: 10px;
-          // border-radius: 20px;
-          // box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
-
-          img {
-            height: 150px;
-            width: 100%;
-          }
-        }
-        .projects_content_right {
-          padding: 10px;
-          .title {
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 26px;
-          }
-          .place {
-            font-size: 18px;
-            line-height: 24px;
-          }
-        }
+      }
+      .Meetings_content {
+        font-family: Open Sans, sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: justify;
+      }
+      .Awards_content {
+        font-family: Open Sans, sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: justify;
       }
     }
   }

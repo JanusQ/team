@@ -14,15 +14,16 @@ export default function Header({ menus }) {
     } else {
       toEn()
     }
-    navigate('/home')
+    // navigate('/home')
   }
   useEffect(() => {
-    const userLanguage = navigator.language || navigator.userLanguage
-    if (userLanguage == 'zh-CN') {
-      toZh()
-    } else {
-      toEn()
-    }
+    // const userLanguage = navigator.language || navigator.userLanguage
+    // if (userLanguage == 'zh-CN') {
+    //   toZh()
+    // } else {
+    //   toEn()
+    // }
+    toEn()
   }, [])
 
   return (
@@ -55,13 +56,13 @@ export default function Header({ menus }) {
                     </li>
                   </Link>
                 ))}
-                <Button
+                {/* <Button
                   style={{ borderColor: '#fff', color: '#000' }}
                   size="small"
                   onClick={changeLanguage}
                 >
                   {lang === 'zh' ? 'English' : '中文'}
-                </Button>
+                </Button> */}
               </Col>
             </Row>
           </Col>

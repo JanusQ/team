@@ -66,6 +66,14 @@ export const UserLayoutRouter = [
         path: '/memberDetail',
         element: LazyLoad(React.lazy(() => import('@/pages/MemberDetail'))),
       },
+      {
+        path: '/teacherDetail',
+        element: LazyLoad(React.lazy(() => import('@/pages/TeacherDetail'))),
+      },
+      // {
+      //   path: '/test',
+      //   element: LazyLoad(React.lazy(() => import('@/pages/Test'))),
+      // },
     ],
   },
 ]

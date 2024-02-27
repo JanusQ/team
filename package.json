@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://guyueguangze.github.io/team",
+  "homepage": " https://janusq.github.io/team/",
   "dependencies": {
     "antd": "^5.4.5",
     "gh-pages": "^6.1.1",

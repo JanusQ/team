@@ -1,166 +1,142 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
-import { Avatar, Col, Row } from "antd";
-import styles from "./index.module.scss";
-import jianweiyin from "@/assets/image/team/jianweiyin.png";
-import liqianglu from "@/assets/image/team/liqianglu.png";
-import tansiwei from "@/assets/image/team/tansiwei.png";
-import wuweitian from "@/assets/image/team/wuweitian.png";
-import paper1 from "@/assets/image/about/paper1.png";
-import paper2 from "@/assets/image/about/paper2.png";
-import paper3 from "@/assets/image/about/paper3.png";
-import paper4 from "@/assets/image/about/paper4.png";
+import React, { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import { Avatar, Col, Row } from 'antd'
+import styles from './index.module.scss'
+import {
+  teacher,
+  teacherZh,
+  PhD,
+  PhDZh,
+  master,
+  masterZh,
+  Undergraduate,
+  UndergraduateZh,
+} from '../Team/teamData'
+import { useLangStore } from '@/store/lang'
+
 export default function MemberDetail() {
+  const { lang } = useLangStore()
+
   const {
-    state: { name },
-  } = useLocation();
-  const teamList = [
-    {
-      name: "jianweiyin",
-      photo: jianweiyin,
-      paperList: [
-        {
-          name: "基于有限元方法的快速而准确的量子读取校准",
-          place: "ASPLOS 2024",
-          img: paper1,
-        },
-        {
-          name: "HyQSAT:基于量子退火和CDCLSAT问题混合求解方法",
-          place: "HPCA 2023",
-          img: paper2,
-        },
-        {
-          name: "使用可复用的波形库加速量子波形编译",
-          place: "ICCAD 2023",
-          img: paper3,
-        },
-        {
-          name: "基于上下文和特征提取的量子电路分析框架",
-          place: "MICRO 2023",
-          img: paper4,
-        },
-      ],
-      introduce:
-        "Jianwei Yin is currently a full professor in the College of Computer Science, Zhejiang University (ZJU), China. He haspublished more than 100 papers in top international journals and conferences. His current research interests include quantum computing, service computing and business process management. He is also the Associate Editor of the IEEE Transactions on Services Computing.",
-    },
-    {
-      name: "liqianglu",
-      photo: liqianglu,
-      paperList: [
-        {
-          name: "基于有限元方法的快速而准确的量子读取校准",
-          place: "ASPLOS 2024",
-          img: paper1,
-        },
-        {
-          name: "HyQSAT:基于量子退火和CDCLSAT问题混合求解方法",
-          place: "HPCA 2023",
-          img: paper2,
-        },
-        {
-          name: "使用可复用的波形库加速量子波形编译",
-          place: "ICCAD 2023",
-          img: paper3,
-        },
-        {
-          name: "基于上下文和特征提取的量子电路分析框架",
-          place: "MICRO 2023",
-          img: paper4,
-        },
-      ],
-      introduce:
-        "Liqiang Lu is a ZJU100 Young Professor in the College of Computer Science, Zhejiang University (ZJU), China. His research interests include quantum computing, computer architecture, deep learning accelerator, and software-hardware codesign. He has authored more than 20 scientific publications in premier international journals and conferences in related  domains, including ISCA, MICRO, HPCA, FCCM, DAC, IEEE Micro,  and TCAD. He also serves as a TPC member in the premier  conferences in the related domain, including ICCAD, FPT, HPCC etc. ",
-    },
-    {
-      name: "tansiwei",
-      photo: tansiwei,
-      paperList: [
-        {
-          name: "基于有限元方法的快速而准确的量子读取校准",
-          place: "ASPLOS 2024",
-          img: paper1,
-        },
-        {
-          name: "HyQSAT:基于量子退火和CDCLSAT问题混合求解方法",
-          place: "HPCA 2023",
-          img: paper2,
-        },
-        {
-          name: "使用可复用的波形库加速量子波形编译",
-          place: "ICCAD 2023",
-          img: paper3,
-        },
-        {
-          name: "基于上下文和特征提取的量子电路分析框架",
-          place: "MICRO 2023",
-          img: paper4,
-        },
-      ],
-      introduce:
-        "Siwei Tan is a 5th year PhD student at Zhejiang University. His interests include the quantum algorithm and computer architecture. Wuwei Tian is a 4th year PhD student at Zhejiang  University.",
-    },
-    {
-      name: "wuweitian",
-      photo: wuweitian,
-      paperList: [
-        {
-          name: "基于有限元方法的快速而准确的量子读取校准",
-          place: "ASPLOS 2024",
-          img: paper1,
-        },
-        {
-          name: "HyQSAT:基于量子退火和CDCLSAT问题混合求解方法",
-          place: "HPCA 2023",
-          img: paper2,
-        },
-        {
-          name: "使用可复用的波形库加速量子波形编译",
-          place: "ICCAD 2023",
-          img: paper3,
-        },
-        {
-          name: "基于上下文和特征提取的量子电路分析框架",
-          place: "MICRO 2023",
-          img: paper4,
-        },
-      ],
-      introduce:
-        "Wuwei Tian is a 4th year PhD student at Zhejiang University. He is interested in the compiler design and quantum hardware.",
-    },
-  ];
-  let member = teamList.filter((item, index) => name === item.name)[0];
+    state: { key, type },
+  } = useLocation()
+  // console.log(key, type, 9999)
+  const titleZh = [
+    '研究方向',
+    '电子邮箱',
+    '简历',
+    '发表论文',
+    '参加会议',
+    '获奖情况',
+    '敬请期待',
+  ]
+  const titleEn = [
+    'Research Area',
+    'Email',
+    'Experiences',
+    'Publications',
+    'Meetings',
+    'Awards',
+    'Stay Tuned',
+  ]
+  const [title, setTitle] = useState([titleZh])
+  const EN = [teacher, PhD, master, Undergraduate]
+  const ZH = [teacherZh, PhDZh, masterZh, UndergraduateZh]
+  const [meberLangType, setMeberLangType] = useState(ZH)
+  let memberData = meberLangType[type].filter((item) => key == item.key)[0]
+  const typeList = ['', 'Ph.D', 'Master', 'Undergraduate']
+  console.log(memberData, 'memberData')
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    if (lang === 'zh') {
+      setMeberLangType(ZH)
+      setTitle(titleZh)
+    } else {
+      setMeberLangType(EN)
+      setTitle(titleEn)
+    }
+  }, [lang])
 
   return (
     <div className={styles.root}>
       <div className="memberDetail_container">
         <div className="MemberDetail_content">
           <div className="MemberDetail_left">
-            <Avatar size={150} src={<img src={member?.photo} alt="avatar" />} />
+            <img src={memberData?.photo} alt="avatar" className="avatar" />
           </div>
           <div className="MemberDetail_right">
-            <h1 className="member_name">{member?.name}</h1>
-            <div className="introduce">{member.introduce}</div>
+            <div className="type">{typeList[type]}</div>
+            <h1 className="member_name">{memberData?.name}</h1>
+            <div className="introduce">{memberData?.backdrop}</div>
+            <div className="">
+              <span className="weight_title">{title[0]}:</span>
+              {memberData.ResearchArea}
+            </div>
+            <div className="introduce">
+              <span className="weight_title">{title[1]}:</span>
+              {memberData.Email}
+            </div>
+            <div className="introduce">
+              <span className="weight_title">{title[2]}:</span>
+              <div className="Publications_content">
+                {memberData.Experiences.map((item, index) => (
+                  <div className="Publications_item" key={index}>
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-        <h1 className="big_title projects_title">projects</h1>
-        {member.paperList.map((item, index) => (
-          <div key={index} className="projects_content">
-            <Row>
-              <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                <div className="projects_content_left">
-                  <img src={item.img} alt="" />
+        <div className="memberData_title">{title[3]}</div>
+        <div className="Publications_content">
+          {memberData.Publications.length > 0
+            ? memberData.Publications.map((item, index) => (
+                <div className="Publications_item" key={index}>
+                  {index + 1}. {item}
                 </div>
-              </Col>
-              <Col xs={24} sm={24} md={18} lg={18} xl={18}>
-                <div className="projects_content_right">
-                  <div className="title">{item.name}</div>
-                  <div className="place">{item.place}</div>
-                </div>
-              </Col>
-            </Row>
+              ))
+            : title[6]}
+        </div>
+        {memberData.more && (
+          <div className="more_container">
+            <div className="memberData_title">More papers are listed in </div>
+            <div className="conten">
+              <a
+                href={memberData.more}
+                target="_blank"
+                style={{ color: '#000' }}
+              >
+                {memberData.more}
+              </a>
+            </div>
           </div>
-        ))}
+        )}
+
+        <div className="meetings_container">
+          <div className="memberData_title">{title[4]}: </div>
+          <div className="Meetings_content">
+            {memberData.Meetings?.length > 0
+              ? memberData.Meetings?.map((item, index) => (
+                  <div className="Meetings_item" key={index}>
+                    {item ? item : ''}
+                  </div>
+                ))
+              : title[6]}
+          </div>
+        </div>
+
+        <div className="memberData_title">{title[5]}: </div>
+        <div className="Awards_content">
+          {memberData.Awards.length > 0
+            ? memberData.Awards.map((item, index) => (
+                <div className="Meetings_item" key={index}>
+                  {item}
+                </div>
+              ))
+            : title[6]}
+        </div>
       </div>
     </div>
-  );
+  )
 }

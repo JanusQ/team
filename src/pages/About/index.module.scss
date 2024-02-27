@@ -1,7 +1,6 @@
 .root {
   :global {
     min-height: 800px;
-
     .header_image {
       background-color: transparent;
       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -30,6 +29,9 @@
         padding: 50px;
 
         .who_we_are_title {
+          font-family: 'Open Sans ExtraBold';
+          // color: #a31f34;
+          font-size: 38px;
         }
         .who_we_are_content {
           margin-top: 50px;
@@ -41,16 +43,20 @@
         padding: 50px 60px;
         background-color: rgb(176, 201, 230);
         margin-bottom: 60px;
+        font-family: 'Open Sans';
         .we_work_on_content {
           display: flex;
           flex-direction: column;
           .we_work_on_content_item {
             margin-top: 30px;
             .we_work_on_title {
+              width: 100%;
               height: 70px;
               font-weight: 600;
               line-height: 70px;
               font-size: 2em;
+              overflow-wrap: break-word;
+              overflow: hidden;
             }
             .we_work_on_research {
             }
@@ -58,6 +64,7 @@
         }
       }
       .news {
+        font-family: 'Open Sans';
         margin-bottom: 60px;
         margin-top: 30px;
         padding: 0 50px;
@@ -84,8 +91,8 @@
         }
       }
       .paper {
+        font-family: 'Open Sans';
         padding: 0 50px;
-
         .paper_title {
           margin-bottom: 50px;
         }
