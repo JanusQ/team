@@ -1,10 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./src/font/font.css" rel="external nofollow" />
+    <meta
+      name="google-site-verification"
+      content="R35mbIEzxGNl9nFrL1hRvXQc4Q8sQFQK3Rhu3WJBgt8"
+    />
+
+    <link rel="stylesheet" href="./src/font/font.css" rel="external nofollow" />
 
     <title>Taiyaun</title>
   </head>
@@ -12,13 +17,13 @@
     <div id="root"></div>
     <script>
       // 这段代码要放在其他js的前面
-      (function(){
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
+      ;(function () {
+        var redirect = sessionStorage.redirect
+        delete sessionStorage.redirect
         if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
+          history.replaceState(null, null, redirect)
         }
-      })();
+      })()
     </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -58,7 +58,9 @@ export default function Team() {
               <Teacher teacherData={item} key={index} type={0} />
             ))}
 
-            <h1 style={{ margin: '20px 0px' }}>Team Members</h1>
+            <h1 style={{ margin: '20px 0px' }} className="TeamMembers">
+              Team Members
+            </h1>
             <div className="member_type_phd">Ph.D</div>
             <div className="member_content">
               {showData[1].map((item, index) => (

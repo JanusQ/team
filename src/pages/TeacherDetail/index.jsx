@@ -85,7 +85,7 @@ export default function MemberDetail() {
             {memberData.Personalhomepage}
           </a>
         </div>
-        <div className="about_title">{title[0]}</div>
+        <div className="about_title big_title">{title[0]}</div>
         <div className="about">{memberData.about}</div>
         {memberData?.lecture?.length > 0 && (
           <div className="lecture_container">

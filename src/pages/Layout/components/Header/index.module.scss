@@ -38,7 +38,12 @@
             font-weight: 900;
             color: rgb(0, 63, 136);
             padding-right: 20px;
-            font-family: Lato;
+            // font-family: Lato;
+          }
+          li {
+            font-family: 'Open Sans ExtraBold' !important;
+            font-size: 16px;
+            line-height: 24px;
           }
         }
         .menuContent {
@@ -46,8 +51,13 @@
           display: flex;
           align-items: center;
           justify-content: right;
-          @media screen and (max-width: 780px) {
+          @media screen and (max-width: 1102px) {
             visibility: hidden;
+          }
+          li {
+            font-family: 'Open Sans' !important;
+            font-size: 16px;
+            line-height: 24px;
           }
           .menu_item {
             color: black;

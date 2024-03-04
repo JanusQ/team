@@ -101,7 +101,7 @@ export default function CourseDetail() {
               bordered
               dataSource={Array.from(courseData.outline)}
               renderItem={(item) => (
-                <List.Item>
+                <List.Item style={{ fontFamily: 'Open Sans' }}>
                   <Typography.Text mark></Typography.Text> {item}
                 </List.Item>
               )}
