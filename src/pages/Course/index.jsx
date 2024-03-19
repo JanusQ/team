@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import styles from './index.module.scss'
 import HeaderImage from '@/components/HeaderImage'
 import { Avatar } from 'antd'
-import jianweiyin from '@/assets/image/team/jianweiyin.png'
-import liqianglu from '@/assets/image/team/liqianglu.png'
+import jianweiyin from '@/assets/image/member/JianweiYin.png'
+import liqianglu from '@/assets/image/member/LiqiangLu.png'
 import '@/assets/styles/common.scss'
 import { useLangStore } from '@/store/lang'
+import { Row, Col } from 'antd'
 
 export default function Course() {
   const { lang } = useLangStore()
@@ -233,61 +234,69 @@ export default function Course() {
 
   return (
     <div className={styles.root}>
-      <HeaderImage />
       <div className="course_container">
-        <div className="curse_content">
-          {courseList.map((item, index) => (
-            <Link
-              key={index}
-              style={{ color: '#000' }}
-              to="/courseDetail"
-              state={{ courseData: item }}
-            >
-              <div className="course_item">
-                <div className="course_title">
-                  <span className="big_weight_text">{titleList[0]}</span>{' '}
-                  {item.title}
-                </div>
-                <div className="course_time">
-                  <span className="big_weight_text">{titleList[1]}</span>
-                  {item.time}
-                </div>
-                <div className="course_type">
-                  <span className="big_weight_text">{titleList[2]}</span>
-                  {item.type}
-                </div>
-                <div className="course_type">
-                  <span className="big_weight_text">{titleList[3]}</span>
-                  {item.Classhour}
-                </div>
-                <div className="course_type">
-                  <span className="big_weight_text">{titleList[4]}</span>
-                  {item.Credithour}
-                </div>
-                <div className="teacher_content">
-                  {item.teacher.map((item1, index) => (
-                    <div key={index} className="teacher_item">
-                      <div className="teacher_name">
-                        <span className="big_weight_text">{titleList[5]}</span>
-                        {item1.name}
-                      </div>
-                      <div className="teacher_photo">
-                        <Avatar
-                          size={60}
-                          src={<img src={item1.photo} alt="avatar" />}
-                        />
+        <Row justify="center">
+          <Col span={15}>
+            <div className="curse_content">
+              {courseList.map((item, index) => (
+                <Link
+                  key={index}
+                  style={{ color: '#000' }}
+                  to="/courseDetail"
+                  state={{ courseData: item }}
+                >
+                  <div className="course_item">
+                    <div className="course_title">
+                      <span className="course_text">{titleList[0]}</span>
+                      {item.title}
+                    </div>
+                    <div className="course_time">
+                      <span className="big_weight_text">{titleList[1]}</span>
+                      {item.time}
+                    </div>
+                    <div className="course_type">
+                      <span className="big_weight_text">{titleList[2]}</span>
+                      {item.type}
+                    </div>
+                    <div className="course_type">
+                      <span className="big_weight_text">{titleList[3]}</span>
+                      {item.Classhour}
+                    </div>
+                    <div className="course_type">
+                      <span className="big_weight_text">{titleList[4]}</span>
+                      {item.Credithour}
+                    </div>
+                    <div className="teacher_content">
+                      <span className="big_weight_text">Instructor:</span>
+                      <div className="teacher_item_content">
+                        {item.teacher.map((item1, index) => (
+                          <div key={index} className="teacher_item">
+                            <div className="teacher_photo">
+                              <Avatar
+                                size={80}
+                                src={<img src={item1.photo} alt="avatar" />}
+                              />
+                            </div>
+                            <div className="teacher_name">
+                              <div className="name">{item1.name}</div>
+                              <div className="Investigator_text">
+                                Principle Investigator
+                              </div>
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  ))}
-                </div>
-                <div className="course_intro">
-                  <span className="big_weight_text">{titleList[6]}</span>
-                  {item.intro}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+                    <div className="course_intro">
+                      <div className="big_weight_text">{titleList[6]}</div>
+                      <div className="course_intro_content">{item.intro}</div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </Col>
+        </Row>
       </div>
     </div>
   )

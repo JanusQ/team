@@ -1,17 +1,7 @@
 .root {
   :global {
     .publication_container {
-      // width: 70%;
-      margin: 50px 0;
-      // margin-top: 30px;
-      font-family: 'Open Sans';
-
-      .Publications_title {
-        font-size: 24px;
-        font-weight: 600;
-        margin-top: 30px;
-        font-family: 'Open Sans ExtraBold';
-      }
+      padding-bottom: 50px;
       .Publications_item {
         font-size: 18px;
         padding: 5px;
@@ -22,27 +12,58 @@
         }
 
         .Publications_item_title {
-          font-weight: 600;
-          line-height: 1.5rem;
+          font-family: PingFang-SC-Bold;
+          color: #000;
+          font-weight: bold;
+          font-size: 20px;
+          color: #000000;
+          line-height: 33px;
+          text-align: justifyLeft;
         }
         .Publications_item_author {
+          font-family: PingFang-SC-Regular;
+          font-weight: 400;
+          font-size: 18px;
+          color: #666666;
+          line-height: 33px;
+          text-align: justifyLeft;
         }
         .Publications_item_place {
+          font-family: PingFang-SC-Regular;
+          font-weight: 400;
+          font-size: 20px;
+          color: #666666;
+          line-height: 33px;
+          text-align: justifyLeft;
         }
+      }
+      .margin_top_80 {
+        margin-top: 80px;
+      }
+      .margin_top_50 {
+        margin-top: 50px;
       }
       .Publications {
         .Publications_title {
-          font-size: 24px;
-          font-weight: 600;
-          margin-top: 30px;
+          font-family: PingFang-SC-Bold;
+          color: #000;
+          font-weight: bold;
+          font-size: 20px;
+          color: #000000;
+          line-height: 33px;
+          text-align: justifyLeft;
         }
         .Publications_content {
           .Publications_item {
-            font-size: 18px;
             padding: 5px;
             .Publications_item_title {
-              font-weight: 600;
-              line-height: 1.5rem;
+              font-family: PingFang-SC-Bold;
+              color: #000;
+              font-weight: bold;
+              font-size: 20px;
+              color: #000000;
+              line-height: 33px;
+              text-align: justifyLeft;
             }
             .Publications_item_author {
             }
@@ -53,13 +74,42 @@
       }
       .Patents {
         .Patents_title {
+          font-family: PingFang-SC-Bold;
+          color: #000;
+          font-weight: bold;
+          font-size: 20px;
+          color: #000000;
+          line-height: 33px;
+          text-align: justifyLeft;
         }
         .Patents_content {
           .Patents_item {
+            font-family: PingFang-SC-Regular;
+            font-weight: 400;
+            font-size: 20px;
+            color: #666666;
+            line-height: 33px;
+            text-align: justifyLeft;
           }
         }
       }
       .Copyright {
+        .Copyright_item_authon {
+          font-family: PingFang-SC-Regular;
+          font-weight: 400;
+          font-size: 20px;
+          color: #666666;
+          line-height: 33px;
+          text-align: justifyLeft;
+        }
+        .Copyright_item_time {
+          font-family: PingFang-SC-Regular;
+          font-weight: 400;
+          font-size: 20px;
+          color: #666666;
+          line-height: 33px;
+          text-align: justifyLeft;
+        }
       }
     }
   }

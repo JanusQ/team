@@ -29,8 +29,8 @@ export default function Header({ menus }) {
   return (
     <div className={styles.root}>
       <ul className="menu_content">
-        <Row justify="center" className="headerContent">
-          <Col span={14}>
+        <Row justify="center" className="headerContent" align="middle">
+          <Col span={15}>
             <Row justify="space-between">
               <Col className="logo_content" lg={4} md={5} sm={24} xs={24}>
                 <li className="logo">

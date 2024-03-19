@@ -13,7 +13,7 @@ import {
   UndergraduateZh,
 } from '../Team/teamData'
 import { useLangStore } from '@/store/lang'
-
+import Title from '@/components/Title'
 export default function MemberDetail() {
   const { lang } = useLangStore()
 
@@ -45,7 +45,7 @@ export default function MemberDetail() {
   const [meberLangType, setMeberLangType] = useState(ZH)
   let memberData = meberLangType[type].filter((item) => key == item.key)[0]
   const typeList = ['', 'Ph.D', 'Master', 'Undergraduate']
-  console.log(memberData, 'memberData')
+  console.log(memberData.Publications, 'memberData')
   useEffect(() => {
     window.scrollTo(0, 0)
     if (lang === 'zh') {
@@ -59,84 +59,94 @@ export default function MemberDetail() {
 
   return (
     <div className={styles.root}>
-      <div className="memberDetail_container">
-        <div className="MemberDetail_content">
-          <div className="MemberDetail_left">
-            <img src={memberData?.photo} alt="avatar" className="avatar" />
-          </div>
-          <div className="MemberDetail_right">
-            <div className="type">{typeList[type]}</div>
-            <h1 className="member_name">{memberData?.name}</h1>
-            <div className="introduce">{memberData?.backdrop}</div>
-            <div className="">
-              <span className="weight_title">{title[0]}:</span>
-              {memberData.ResearchArea}
-            </div>
-            <div className="introduce">
-              <span className="weight_title">{title[1]}:</span>
-              {memberData.Email}
-            </div>
-            <div className="introduce">
-              <span className="weight_title">{title[2]}:</span>
-              <div className="Publications_content">
-                {memberData.Experiences.map((item, index) => (
-                  <div className="Publications_item" key={index}>
-                    {item}
+      <Row justify={'center'}>
+        <Col span={15}>
+          <div className="memberDetail_container">
+            <Title titleText={'Team'} />
+            <div className="MemberDetail_content">
+              <div className="MemberDetail_left">
+                <Avatar
+                  size={200}
+                  src={<img src={memberData?.photo} alt="avatar" />}
+                />
+              </div>
+              <div className="MemberDetail_right">
+                <h1 className="member_name">{memberData?.name}</h1>
+                <div className="type">{typeList[type]}</div>
+                <div className="introduce">{memberData?.backdrop}</div>
+                <div className="introduce">
+                  <span className="weight_title">{title[0]}:</span>
+                  {memberData.ResearchArea}
+                </div>
+                <div className="introduce">
+                  <span className="weight_title">{title[1]}:</span>
+                  {memberData.Email}
+                </div>
+                <div className="introduce">
+                  <span className="weight_title">{title[2]}:</span>
+                  <div className="Publications_content">
+                    {memberData.Experiences.map((item, index) => (
+                      <div className="Publications_item" key={index}>
+                        {item}
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="memberData_title">{title[3]}</div>
-        <div className="Publications_content">
-          {memberData.Publications.length > 0
-            ? memberData.Publications.map((item, index) => (
-                <div className="Publications_item" key={index}>
-                  {index + 1}. {item}
+            <div className="memberData_title">{title[3]}</div>
+            <div className="Publications_content">
+              {memberData.Publications.length > 0
+                ? memberData.Publications?.map((item, index) => (
+                    <div className="Publications_item" key={index}>
+                      {item}
+                    </div>
+                  ))
+                : title[6]}
+            </div>
+            {memberData.more && (
+              <div className="more_container">
+                <div className="memberData_title">
+                  More papers are listed in
                 </div>
-              ))
-            : title[6]}
-        </div>
-        {memberData.more && (
-          <div className="more_container">
-            <div className="memberData_title">More papers are listed in </div>
-            <div className="conten">
-              <a
-                href={memberData.more}
-                target="_blank"
-                style={{ color: '#000' }}
-              >
-                {memberData.more}
-              </a>
+                <div className="conten">
+                  <a
+                    href={memberData.more}
+                    target="_blank"
+                    style={{ color: '#000' }}
+                  >
+                    {memberData.more}
+                  </a>
+                </div>
+              </div>
+            )}
+
+            <div className="meetings_container">
+              <div className="memberData_title">{title[4]}: </div>
+              <div className="Meetings_content">
+                {memberData.Meetings?.length > 0
+                  ? memberData.Meetings?.map((item, index) => (
+                      <div className="Meetings_item" key={index}>
+                        {item ? item : ''}
+                      </div>
+                    ))
+                  : title[6]}
+              </div>
+            </div>
+
+            <div className="memberData_title">{title[5]}: </div>
+            <div className="Awards_content">
+              {memberData.Awards.length > 0
+                ? memberData.Awards.map((item, index) => (
+                    <div className="Meetings_item" key={index}>
+                      {item}
+                    </div>
+                  ))
+                : title[6]}
             </div>
           </div>
-        )}
-
-        <div className="meetings_container">
-          <div className="memberData_title">{title[4]}: </div>
-          <div className="Meetings_content">
-            {memberData.Meetings?.length > 0
-              ? memberData.Meetings?.map((item, index) => (
-                  <div className="Meetings_item" key={index}>
-                    {item ? item : ''}
-                  </div>
-                ))
-              : title[6]}
-          </div>
-        </div>
-
-        <div className="memberData_title">{title[5]}: </div>
-        <div className="Awards_content">
-          {memberData.Awards.length > 0
-            ? memberData.Awards.map((item, index) => (
-                <div className="Meetings_item" key={index}>
-                  {item}
-                </div>
-              ))
-            : title[6]}
-        </div>
-      </div>
+        </Col>
+      </Row>
     </div>
   )
 }

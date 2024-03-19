@@ -13,4 +13,24 @@
   font-weight: 700;
   src: url('./OpenSansExtraBold.ttf');
 }
+@font-face {
+  font-family: 'PingFang-SC-Regular';
+  font-style: normal;
+  src: url('./PingFang_REGULAR.woff2');
+}
+@font-face {
+  font-family: 'PingFang-SC-Heavy';
+  font-style: normal;
+  src: url('./PingFang_HEAVY.woff2');
+}
+@font-face {
+  font-family: 'PingFang-SC-Medium';
+  font-style: normal;
+  src: url('./PingFang_MEDIUM.woff2');
+}
+@font-face {
+  font-family: 'PingFang-SC-Bold';
+  font-style: normal;
+  src: url('./PingFang_BOLD.woff2');
+}
 

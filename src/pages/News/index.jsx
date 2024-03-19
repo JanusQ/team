@@ -4,7 +4,7 @@ import HeaderImage from '@/components/HeaderImage'
 import '@/assets/styles/common.scss'
 import { Select, Space, Row, Col } from 'antd'
 import { useLangStore } from '@/store/lang'
-
+import Title from '@/components/Title'
 export default function News() {
   const { lang } = useLangStore()
   const [sort, setSort] = useState(1)
@@ -98,9 +98,9 @@ export default function News() {
     <div className={styles.root}>
       <HeaderImage />
       <Row justify={'center'}>
-        <Col span={14}>
+        <Col span={15}>
           <div className="news">
-            <div className="news_title big_title">News</div>
+            <Title titleText={'News'} />
             <Select
               defaultValue="Date(Newst to Oldest)"
               onChange={handleChange}

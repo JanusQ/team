@@ -4,6 +4,7 @@ import styles from './index.module.scss'
 import { Link } from 'react-router-dom'
 import logo from '@/assets/logo.png'
 import { useLangStore } from '@/store/lang'
+import codeimae from '@/assets/image/footer/code.png'
 export default function Footer() {
   const { lang } = useLangStore()
 
@@ -11,10 +12,10 @@ export default function Footer() {
   const footerStyle = {
     textAlign: 'center',
     color: '#fff',
-    backgroundColor: ' rgb(245,247,270)',
+    backgroundColor: '#333333',
     padding: '86px 144px 93px 144px',
-    borderTopRightRadius: 50,
-    borderTopLeftRadius: 50,
+    // borderTopRightRadius: 50,
+    // borderTopLeftRadius: 50,
   }
   const footerTextZh = [
     '常用连接',
@@ -45,15 +46,18 @@ export default function Footer() {
         <div className="footer_content">
           <div className="footer_menu">
             <Row>
-              <Col lg={12} sm={24} xs={24}>
+              <Col lg={8} sm={24} xs={24}>
                 <Link to="/home">
                   <div className="logo_content">
                     <img className="logo" src={logo} alt="" />
-                    <span className="logo_name">Taiyuan</span>
+                    <span className="logo_name">
+                      <div className="text"> TAIYUAN</div>
+                      <div className="text">QUANTUM</div>
+                    </span>
                   </div>
                 </Link>
               </Col>
-              <Col lg={12} sm={24} xs={24}>
+              <Col lg={8} sm={24} xs={24}>
                 <div className="footer_Link">
                   <p className="footer_Link_title">{footerText[0]}</p>
                   <Link
@@ -64,24 +68,19 @@ export default function Footer() {
                     <p>Jianwei Yin</p>
                   </Link>
                   <p>
-                    <a
-                      style={{ color: '#1a1b1f' }}
-                      target="_blank"
-                      href="http://www.cs.zju.edu.cn"
-                    >
+                    <a target="_blank" href="http://www.cs.zju.edu.cn">
                       {footerText[1]}
                     </a>
                   </p>
                   <p>
-                    <a
-                      style={{ color: '#1a1b1f' }}
-                      target="_blank"
-                      href="https://www.zju.edu.cn"
-                    >
+                    <a target="_blank" href="https://www.zju.edu.cn">
                       {footerText[2]}
                     </a>
                   </p>
                 </div>
+              </Col>
+              <Col lg={8} sm={24} xs={24}>
+                <img src={codeimae} alt="" srcset="" />
               </Col>
             </Row>
 

@@ -1,4 +1,4 @@
-import JianweiYin from '@/assets/image/member/JianweiYin.jpg'
+import JianweiYin from '@/assets/image/member/JianweiYin.png'
 import LiqiangLu from '@/assets/image/member/LiqiangLu.png'
 import SiweiTan from '@/assets/image/member/SiweiTan.jpg'
 import TingtingLi from '@/assets/image/member/TingtingLi.jpg'
@@ -424,8 +424,9 @@ export const master = [
       '2014.9-2018.6, B. Eng., School of Computer Engineering and Science, Shanghai University.',
       '2022.9-present, master degree candidate, College of Computer Science and Technology, Zhejiang University.',
     ],
-    Publications:
-      '1. Siwei Tan, Liqiang Lu, Jia Yu, Congliang Lang, Yongheng Shang, Xinkui Zhao, Mingshuai Chen, Yun Liang, Jianwei Yin. QuFEM: Fast and Accurate Quantum Readout Calibration Using the Finite Element Method. ASPLOS, 2024.',
+    Publications: [
+      ' Siwei Tan, Liqiang Lu, Jia Yu, Congliang Lang, Yongheng Shang, Xinkui Zhao, Mingshuai Chen, Yun Liang, Jianwei Yin. QuFEM: Fast and Accurate Quantum Readout Calibration Using the Finite Element Method. ASPLOS, 2024.',
+    ],
     Meetings: [],
     Awards: [],
   },

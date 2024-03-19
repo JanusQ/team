@@ -6,6 +6,7 @@ import { Divider, Avatar } from 'antd'
 import '@/assets/styles/common.scss'
 import Teacher from './component/Teacher'
 import Student from './component/Student'
+import Title from '@/components/Title'
 import { Row, Col } from 'antd'
 import {
   teacher,
@@ -47,20 +48,16 @@ export default function Team() {
 
   return (
     <div className={styles.root}>
-      <HeaderImage />
       <Row justify={'center'}>
-        <Col span={14}>
+        <Col span={15}>
           <div className="team_container">
-            <div className="team_title big_title"> Team</div>
-            <Divider />
-            <h2 className="leader">Principle Investigator</h2>
+            <Title titleText={'Principle Investigator'} />
             {showData[0].map((item, index) => (
               <Teacher teacherData={item} key={index} type={0} />
             ))}
+            <div className="margin" style={{ height: 114 }}></div>
+            <Title titleText={'Team Members'} style={{ marginTop: 30 }} />
 
-            <h1 style={{ margin: '20px 0px' }} className="TeamMembers">
-              Team Members
-            </h1>
             <div className="member_type_phd">Ph.D</div>
             <div className="member_content">
               {showData[1].map((item, index) => (

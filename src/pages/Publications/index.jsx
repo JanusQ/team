@@ -9,6 +9,7 @@ import paper2 from '@/assets/image/about/paper2.png'
 import paper3 from '@/assets/image/about/paper3.png'
 import paper4 from '@/assets/image/about/paper4.png'
 import { Row, Col } from 'antd'
+import Title from '@/components/Title'
 export default function Publications() {
   const { lang } = useLangStore()
 
@@ -269,14 +270,12 @@ export default function Publications() {
     <div className={styles.root}>
       <HeaderImage />
       <Row justify={'center'}>
-        <Col span={14}>
+        <Col span={15}>
           <div className="publication_container">
             <div className="publication_title big_title"></div>
-            <div className="Publications">
-              <div className="Publications_title taiyuanColor">
-                {titleList[0]}
-              </div>
-              <div className="Publications_content">
+            <div className="Publications margin_top_80">
+              <Title titleText={titleList[0]} />
+              <div className="Publications_content margin_top_50">
                 {PublicationsList.map((item, index) => (
                   <Link
                     key={index}
@@ -285,7 +284,6 @@ export default function Publications() {
                     style={{ color: '#000' }}
                   >
                     <div key={index} className="Publications_item">
-                      {/* <a href={}></a> */}
                       <div className="Publications_item_title">
                         {item.title}
                       </div>
@@ -300,11 +298,9 @@ export default function Publications() {
                 ))}
               </div>
             </div>
-            <div className="Patents">
-              <div className="Patents_title Publications_title taiyuanColor">
-                {titleList[1]}
-              </div>
-              <div className="Patents_content">
+            <div className="Patents margin_top_80">
+              <Title titleText={titleList[1]} />
+              <div className="Patents_content margin_top_50">
                 {PatentsList.map((item, index) => (
                   <div key={index} className="Patents_item Publications_item">
                     <div className="Patents_item_title Publications_item_title">
@@ -316,11 +312,9 @@ export default function Publications() {
                 ))}
               </div>
             </div>
-            <div className="Copyright ">
-              <div className="Copyright_title Publications_title taiyuanColor">
-                {titleList[2]}
-              </div>
-              <div className="Copyright_contetn">
+            <div className="Copyright margin_top_80">
+              <Title titleText={titleList[2]} />
+              <div className="Copyright_contetn margin_top_50">
                 {CopyrightList.map((item, index) => (
                   <div key={index} className="Copyright_item Publications_item">
                     <div className="Copyright_item_title Publications_item_title">

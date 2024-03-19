@@ -1,14 +1,14 @@
 .root {
   :global {
-    // height: 800px;
-    // background-color: skyblue;
-    min-height: 900px;
-    font-family: Open Sans, sans-serif;
+    background-color: #fff;
+    margin-bottom: 50px;
+    margin-top: 50px;
     .memberDetail_container {
-      width: 70%;
-      margin: 0 auto;
+      width: 100%;
       .MemberDetail_content {
+        padding: 30px;
         display: flex;
+        border-bottom: 1px solid #dcd9d9;
         .MemberDetail_left {
           margin-right: 30px;
           .avatar {
@@ -20,50 +20,82 @@
         }
         .MemberDetail_right {
           .type {
+            font-family: PingFang-SC-Bold;
+            font-weight: bold;
             font-size: 18px;
-            line-height: 24px;
+            color: #666666;
+            line-height: 31px;
           }
           .member_name {
-            font-weight: 800;
+            font-family: PingFang-SC-Bold;
+            font-weight: bold;
+            font-size: 25px;
+            color: #000000;
+            line-height: 31px;
           }
           .introduce {
-            // margin-top: 20px;
-            font-size: 16px;
-            line-height: 30px;
+            font-family: PingFang-SC-Regular;
+            font-weight: 400;
+            font-size: 18px;
+            color: #666666;
+            line-height: 31px;
           }
         }
         .weight_title {
+          font-family: PingFang-SC-Regular;
+          font-weight: 600;
           font-size: 18px;
-          font-weight: 700;
-          margin-right: 10px;
+          color: #666666;
+          line-height: 31px;
         }
       }
       .memberData_title {
         margin-top: 20px;
         margin-bottom: 10px;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 30px;
+        font-family: PingFang-SC-Bold;
+        font-weight: bold;
+        font-size: 20px;
+        color: #035b9e;
+        line-height: 31px;
       }
       .Publications_content {
-        font-family: Open Sans, sans-serif;
-        font-size: 16px;
-        line-height: 24px;
+        font-family: PingFang-SC-Regular;
+        font-weight: 400;
+        font-size: 18px;
+        color: #666666;
+        line-height: 31px;
         .Publications_item {
           text-align: justify;
+          &::before {
+            content: '\2022'; /* 使用 Unicode 编码表示圆点 */
+            margin-right: 5px; /* 调整圆点与文本的距离 */
+          }
         }
       }
       .Meetings_content {
-        font-family: Open Sans, sans-serif;
-        font-size: 16px;
-        line-height: 24px;
+        font-family: PingFang-SC-Regular;
+        font-weight: 400;
+        font-size: 18px;
+        color: #666666;
+        line-height: 31px;
         text-align: justify;
       }
       .Awards_content {
-        font-family: Open Sans, sans-serif;
-        font-size: 16px;
-        line-height: 24px;
+        font-family: PingFang-SC-Regular;
+        font-weight: 400;
+        font-size: 18px;
+        color: #666666;
+        line-height: 31px;
         text-align: justify;
+        .Meetings_item {
+          &::before {
+            content: '\2022'; /* 使用 Unicode 编码表示圆点 */
+            margin-right: 5px; /* 调整圆点与文本的距离 */
+          }
+        }
+      }
+      .more_container {
+        font-family: PingFang-SC-Regular;
       }
     }
   }

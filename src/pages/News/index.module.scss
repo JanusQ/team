@@ -6,7 +6,7 @@
       // margin-left: 10%;
       // margin-right: 10%;
       padding: 50px 0;
-      font-family: 'Open Sans';
+      font-family: PingFang-SC-Regular;
 
       .news_item {
         display: flex;
@@ -21,11 +21,21 @@
         }
         .news_time {
           padding: 10px;
+          font-weight: 400;
+          font-size: 18px;
+          color: #666666;
+          line-height: 33px;
         }
         .news_title {
           padding: 10px;
+          color: #000;
+          font-weight: bold;
+          font-size: 20px;
+          color: #000000;
+          line-height: 33px;
+          text-align: justifyLeft;
+          text-decoration: underline;
           .news_title_link {
-            text-decoration: solid;
           }
         }
       }

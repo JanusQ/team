@@ -22,18 +22,21 @@ export default function Teacher({ teacherData, type }) {
   return (
     <div className={styles.root}>
       <div className="team_content">
-        <div className="team_content_left">
-          <Link to="/teacherDetail" state={{ key: teacherData.key, type }}>
-            <Avatar
-              // shape="square"
-              size={65}
-              src={<img src={teacherData.photo} alt="avatar" />}
-            />
+        <div className="team_content_top">
+          <Link
+            to="/teacherDetail"
+            className="avatar"
+            state={{ key: teacherData.key, type }}
+          >
+            <img src={teacherData.photo} alt="avatar" />
           </Link>
+          <div className="top_right">
+            <h4 className="name">{teacherData.name}</h4>
+            <div className="introduce">{teacherData?.backdrop}</div>
+          </div>
         </div>
-        <div className="team_content_right">
-          <h4 className="name">{teacherData.name}</h4>
-          <div className="introduce">{teacherData?.backdrop}</div>
+        <div className="team_content_bottom">
+          <div className="Introduction">Introduction:</div>
           {/* <div className="introduce">
             <span className="weight_title">{title[0]}:</span>
             {teacherData.Address}

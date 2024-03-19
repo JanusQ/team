@@ -4,13 +4,15 @@
     .header_image {
       background-color: transparent;
       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('~@/assets/image/about/homeHeader.jpg');
-      background-position: 0 0, 30% 35%;
+        url('@/assets/image/banner/banner1.jpg');
+      // background-position: 0 0, 30% 35%;
       background-repeat: repeat, repeat;
       background-size: auto, cover;
       background-attachment: scroll, scroll;
       border-bottom: 1px solid #e4ebf3;
-      padding: 20px 30px;
+      padding: 194px 100px;
+      // height: 509px;
+      padding-right: 235px;
       position: relative;
       overflow: visible;
       .hero-heading {
@@ -24,81 +26,106 @@
       }
     }
     .about_container {
+      margin-top: 103px;
       width: 100%;
       .who_we_are {
-        padding: 50px;
-
         .who_we_are_title {
-          font-family: 'Open Sans ExtraBold';
-          // color: #a31f34;
-          font-size: 38px;
+          font-family: PingFang-SC-Regular;
         }
         .who_we_are_content {
-          margin-top: 50px;
+          font-family: PingFang-SC-Regular;
+          margin-top: 40px;
+          font-weight: 400;
+          font-size: 18px;
+          color: #666666;
+          line-height: 35px;
+          text-align: justifyLeft;
         }
       }
       .we_work_on {
-        width: 100%;
-        border-radius: 30px;
-        padding: 50px 60px;
-        background-color: rgb(176, 201, 230);
-        margin-bottom: 60px;
+        margin-top: 120px;
         font-family: 'Open Sans';
         .we_work_on_content {
-          display: flex;
-          flex-direction: column;
-          .we_work_on_content_item {
-            margin-top: 30px;
-            .we_work_on_title {
-              width: 100%;
-              height: 70px;
-              font-weight: 600;
-              line-height: 70px;
-              font-size: 2em;
-              overflow-wrap: break-word;
-              overflow: hidden;
-            }
-            .we_work_on_research {
-            }
+          margin-top: 45px;
+          :global(.ant-tabs-ink-bar-animated) {
+            background-color: #035b9e;
+          }
+          :global(.ant-tabs-tab-btn) {
+            font-family: PingFang-SC-Bold;
+            font-size: 15px;
+            color: #035b9e;
+            line-height: 21px;
+            text-align: justifyLeft;
+          }
+          .researchLists_title {
+            font-family: PingFang-SC-Heavy;
+            font-weight: 800;
+            font-size: 23px;
+            color: #035b9e;
+            line-height: 32px;
+            text-align: justifyLeft;
+            padding: 10px 0;
+          }
+          .researchLists_content {
+            font-family: PingFang-SC-Medium;
+            font-weight: 500;
+            font-size: 18px;
+            color: #666666;
+            line-height: 33px;
+            text-align: justifyLeft;
           }
         }
       }
       .news {
-        font-family: 'Open Sans';
-        margin-bottom: 60px;
-        margin-top: 30px;
-        padding: 0 50px;
-        .news_text {
-          margin-bottom: 50px;
-        }
+        margin-top: 106px;
+
         .news_item {
           display: flex;
           font-size: 22px;
-          list-style: circle;
-          a {
-            color: #000;
+          height: 165px;
+          border-bottom: 3px solid #dcd9d9;
+          padding: 25px 0;
+          .left_item {
+            width: 125px;
+            font-family: PingFang-SC-Regular;
+            font-weight: 400;
+            font-size: 18px;
+            color: #666666;
+            line-height: 33px;
+            text-align: justifyLeft;
           }
-          .news_time {
-            padding: 10px;
-            white-space: nowrap;
-          }
-          .news_title {
-            padding: 10px;
-            .news_title_link {
-              text-decoration: solid;
+          .center_title {
+            a {
+              font-family: PingFang-SC-Bold;
+              color: #000;
+              font-weight: bold;
+              font-size: 20px;
+              color: #000000;
+              line-height: 33px;
+              text-align: justifyLeft;
+              text-decoration: underline;
             }
+            .source {
+              margin-top: 30px;
+              font-family: PingFang-SC-Bold;
+              font-weight: 400;
+              font-size: 16px;
+              color: #666666;
+              line-height: 33px;
+              text-align: justifyLeft;
+            }
+          }
+          .right_img {
+            width: 253px;
+            height: 138px;
           }
         }
       }
       .paper {
-        font-family: 'Open Sans';
-        padding: 0 50px;
-        .paper_title {
-          margin-bottom: 50px;
-        }
+        margin-top: 106px;
         .paper_content {
+          margin-top: 26px;
           display: flex;
-          flex-wrap: wrap;
           a {
             color: #000;
           }
@@ -106,9 +133,8 @@
             margin: 10px;
             cursor: pointer;
             .paper_image_content {
-              height: 300px;
+              height: 212px;
               width: 100%;
-              border-radius: 20px;
               box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
               transition: transform 0.3s ease;
               &:hover {
@@ -122,14 +148,40 @@
             }
 
             .paper_title {
-              font-weight: 600;
-              line-height: 1.5em;
-              margin-top: 20px;
-              margin-bottom: 10px;
-              font-size: 24px;
+              font-family: PingFang-SC-Bold;
+              font-weight: bold;
+              font-size: 17px;
+              color: #000000;
+              line-height: 25px;
+              text-align: justifyLeft;
+              margin-top: 12px;
+              text-decoration: underline;
+            }
+            .pater_content {
+              height: 82px;
+              margin-top: 40px;
+              font-family: PingFang-SC-Regular;
+              font-weight: 400;
+              font-size: 15px;
+              color: #666666;
+              line-height: 22px;
+              text-align: justifyLeft;
+              overflow: hidden; /* 超出部分隐藏 */
+            }
+            .paper_author {
+              margin-top: 56px;
             }
             .paper_place {
-              font-size: 20px;
+              font-weight: 400;
+              font-size: 16px;
+              color: #666666;
+              .place {
+                font-family: PingFang-SC-Regular;
+                font-weight: 600;
+                font-size: 16px;
+                color: #000000;
+                line-height: 24px;
+              }
             }
             .paper_contetn {
               margin-top: 10px;

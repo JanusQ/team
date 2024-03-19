@@ -6,6 +6,7 @@
       list-style: none;
       text-decoration: none;
     }
+
     height: 62px;
     margin: 0 auto;
     display: flex;
@@ -14,7 +15,9 @@
       height: 62px;
       width: 100%;
       // padding: 0 48px;
-      background-color: #fff;
+      background-color: #031329;
+      // border-bottom: 1px solid #dcd9d9;
+
       display: flex;
       justify-content: center;
       align-items: center;
@@ -22,6 +25,11 @@
       left: 50%;
       transform: translate(-50%, 0);
       z-index: 999;
+      // .ant-col-15 {
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: space-between;
+      // }
       .headerContent {
         height: 100%;
         width: 100%;
@@ -36,12 +44,13 @@
           .myname {
             font-size: 36px;
             font-weight: 900;
-            color: rgb(0, 63, 136);
+            // color: rgb(0, 63, 136);
+            color: #fff;
             padding-right: 20px;
             // font-family: Lato;
           }
           li {
-            font-family: 'Open Sans ExtraBold' !important;
+            font-family: PingFang-SC-Bold !important;
             font-size: 16px;
             line-height: 24px;
           }
@@ -55,22 +64,24 @@
             visibility: hidden;
           }
           li {
-            font-family: 'Open Sans' !important;
+            font-family: PingFang-SC-Bold !important;
             font-size: 16px;
             line-height: 24px;
           }
           .menu_item {
-            color: black;
+            color: #fff;
             font-family: Lato;
             padding: 10px;
             font-weight: 900;
             font-size: 16px;
             &:hover {
-              color: rgb(0, 63, 136);
+              // color: rgb(0, 63, 136);
+              border-bottom: 3px solid #3877d1;
             }
           }
           .path_active {
-            color: rgb(0, 63, 136);
+            // color: rgb(0, 63, 136);
+            border-bottom: 3px solid #3877d1;
           }
         }
       }

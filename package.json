@@ -13,7 +13,7 @@
   },
   "homepage": " https://janusq.github.io/team/",
   "dependencies": {
-    "antd": "^5.4.5",
+    "antd": "^5.15.2",
     "gh-pages": "^6.1.1",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",

@@ -11,15 +11,21 @@
         }
       }
       .student_container_right {
-        font-weight: 600;
-        font-size: 18px;
         margin-left: 10px;
         .grad {
-          font-weight: normal;
-          font-size: 14px;
           margin-top: 5px;
+          font-family: PingFang-SC-Regular;
+          font-weight: 400;
+          font-size: 14px;
+          color: #666666;
+          line-height: 18px;
         }
         .student_name {
+          font-family: PingFang-SC-Bold;
+          font-weight: bold;
+          font-size: 17px;
+          color: #000000;
+          line-height: 31px;
         }
       }
     }

@@ -7,8 +7,9 @@ import paper2 from '@/assets/image/about/paper2.png'
 import paper3 from '@/assets/image/about/paper3.png'
 import paper4 from '@/assets/image/about/paper4.png'
 import '@/assets/styles/common.scss'
-import { Row, Col } from 'antd'
+import { Row, Col, Card } from 'antd'
 import { useLangStore } from '@/store/lang'
+import Title from '@/components/Title'
 export default function About() {
   const { lang } = useLangStore()
   // whoAreWe
@@ -57,7 +58,20 @@ export default function About() {
   const researchListEn = [
     {
       title: 'Taiyuan Superconducting Quantum Computing Cloud Platform',
-      content: `In July 2022, the research group launched the first superconducting quantum computing cloud platform named "Taiyuan 1," which supports computational visualization and distributed parallel sAcheduling. This platform enables remote access to Zhejiang University's independently developed "Tianmu 1" quantum chip, providing 20-qubit computing power. The cloud platform, accessible via the domain janusq.zju.edu.cn, is open to the public. By employing a visual programming environment, this platform reduces the barriers to entry for quantum computing, leading the international research wave in the design of quantum computer software, hardware, system architecture, and algorithm development. Notably, renowned universities and leading companies both domestically and internationally, including Microsoft, the University of Sydney, Huawei, and Tencent, have registered to use this cloud platform.`,
+      content: `In July 2022, the research group launched the first superconducting
+          quantum computing cloud platform named "Taiyuan 1," which supports
+          computational visualization and distributed parallel sAcheduling. This
+          platform enables remote access to Zhejiang University's independently
+          developed "Tianmu 1" quantum chip, providing 20-qubit computing power.
+          The cloud platform, accessible via the domain janusq.zju.edu.cn, is
+          open to the public. By employing a visual programming environment,
+          this platform reduces the barriers to entry for quantum computing,
+          leading the international research wave in the design of quantum
+          computer software, hardware, system architecture, and algorithm
+          development. Notably, renowned universities and leading companies both
+          domestically and internationally, including Microsoft, the University
+          of Sydney, Huawei, and Tencent, have registered to use this cloud
+          platform.`,
       image: tinyml,
       titleColor: 'rgb(139, 176, 210)',
     },
@@ -84,8 +98,29 @@ export default function About() {
       titleColor: 'rgb(0, 63, 136)',
     },
   ]
-  const [researchLists, setresearchLists] = useState(researchListZh)
+  const [researchLists, setresearchLists] = useState(researchListEn)
+  const [activeTabKey1, setActiveTabKey1] = useState(
+    researchLists[0].title.substring(0, 10)
+  )
 
+  const tabListNoTitle = []
+  let contentListNoTitle = {}
+  for (let index = 0; index < researchLists.length; index++) {
+    tabListNoTitle.push({
+      key: researchLists[index].title.substring(0, 10),
+      label: researchLists[index].title.substring(0, 30),
+    })
+    contentListNoTitle[researchLists[index].title.substring(0, 10)] = (
+      <div>
+        <p className="researchLists_title">{researchLists[index].title}</p>
+        <p className="researchLists_content">{researchLists[index].content}</p>
+      </div>
+    )
+  }
+
+  const onTab1Change = (key) => {
+    setActiveTabKey1(key)
+  }
   const options = [
     {
       label: '\xa0 1 \xa0',
@@ -123,11 +158,17 @@ export default function About() {
   const newsListZh = [
     {
       time: '2021年12月',
+      type: 'Article',
+      source: 'Source: China News Network',
+      image: 'image',
       title: '浙江大学发布“莫干1号”“天目1号”超导量子芯片',
       link: 'https://hic.zju.edu.cn/2021/1220/c56173a2452801/page.htm',
     },
     {
       time: '2022年7月',
+      type: 'Article',
+      source: 'Source: China News Network',
+      image: 'image',
       title: '天目1号”超导量子芯片应用成果重磅发布！',
       link: 'https://hic.zju.edu.cn/2022/0723/c56130a2605554/page.htm',
     },
@@ -135,12 +176,18 @@ export default function About() {
   const newsListEn = [
     {
       time: 'Dec 2021',
+      type: 'Article',
+      source: 'Source: China News Network',
+      image: 'image',
       title:
         'Zhejiang University released "Mogan 1" and "Tianmu 1" superconducting quantum chips',
       link: 'https://hic.zju.edu.cn/2021/1220/c56173a2452801/page.htm',
     },
     {
       time: 'Jul 2022',
+      type: 'Article',
+      source: 'Source: China News Network',
+      image: 'image',
       title:
         '"Tianmu 1" superconducting quantum chip application results released!',
       link: 'https://hic.zju.edu.cn/2022/0723/c56130a2605554/page.htm',
@@ -337,56 +384,68 @@ export default function About() {
   return (
     <div className={styles.root}>
       <div className="header_image">
-        <h1 className="hero-heading">Efficient AI Computing,</h1>
-        <h1 className="hero-heading">Transforming the Future.</h1>
+        <h1 className="hero-heading">Towards Noise-tolerant</h1>
+        <h1 className="hero-heading">Quantum Computing</h1>
       </div>
       <div className="about_container">
         <Row justify="center">
-          <Col span={14}>
+          <Col span={15}>
             <div className="who_we_are">
-              <h1 className="who_we_are_title big_title">{whoAreWe.title}</h1>
+              <Title titleText={whoAreWe.title} />
+              {/* <h1 className="who_we_are_title big_title">{whoAreWe.title}</h1> */}
               <div className="who_we_are_content content_font">
                 {whoAreWe.content}
               </div>
             </div>
             <div className="we_work_on">
-              <h1 className="we_work_on_title big_title">{titleList[0]}</h1>
+              <Title titleText={titleList[0]} />
               <div className="we_work_on_content">
-                {researchLists.map((item, index) => (
-                  <div className="we_work_on_content_item" key={index}>
-                    <div className="we_work_on_title">{item.title}</div>
-                    <div className="we_work_on_research content_font">
-                      {item.content}
+                <Card
+                  style={{
+                    width: '100%',
+                    color: '#035B9E',
+                  }}
+                  tabList={tabListNoTitle}
+                  activeTabKey={activeTabKey1}
+                  onTabChange={onTab1Change}
+                >
+                  {contentListNoTitle[activeTabKey1]}
+                </Card>
+              </div>
+            </div>
+            <div className="news">
+              <Title titleText={'news'} />
+              <div className="news_content">
+                {newsList.map((item, index) => (
+                  <div className="news_item" key={index}>
+                    <div className="left_item">
+                      <div className="news_tpye">{item.type}</div>
+                      <div className="news_time">{item.time}</div>
                     </div>
+                    <div className="center_title">
+                      <div className="title">
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item.title}
+                        </a>
+                      </div>
+                      <div className="source">{item.source}</div>
+                    </div>
+                    <div className="right_img"></div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="news">
-              <div className="news_text big_title">News</div>
-
-              <ul className="news_content">
-                {newsList.map((item, index) => (
-                  <li className="news_item" key={index}>
-                    <div className="news_time">{item.time}</div>
-                    <a
-                      className="news_title_link"
-                      href={item.link}
-                      target="_blank"
-                    >
-                      <div className="news_title">{item.title}</div>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
             <div className="paper">
-              <div className="paper_title big_title">{titleList[1]}</div>
+              <Title titleText={titleList[1]} />
               <div className="paper_content">
                 {paperList.map((item, index) => (
                   <Link
                     key={index}
-                    style={{ width: '50%' }}
+                    style={{ width: '25%' }}
                     state={{ detail: item }}
                     to="/achievementDetail"
                   >
@@ -399,7 +458,12 @@ export default function About() {
                         />
                       </div>
                       <div className="paper_title">{item.title}</div>
-                      <div className="paper_place">{item.place}</div>
+                      <div className="pater_content">{item.Abstract}</div>
+                      <div className="paper_author"></div>
+                      <div className="paper_place">
+                        <span className="place">News & Views </span>
+                        {item.place}
+                      </div>
                       {/* <div className="paper_contetn">{item.content}</div> */}
                     </div>
                   </Link>
