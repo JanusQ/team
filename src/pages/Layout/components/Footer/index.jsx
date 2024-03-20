@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Layout, Row, Col } from 'antd'
 import styles from './index.module.scss'
 import { Link } from 'react-router-dom'
-import logo from '@/assets/logo.png'
+import logo from '@/assets/logo_wite.png'
 import { useLangStore } from '@/store/lang'
 import codeimae from '@/assets/image/footer/code.png'
 export default function Footer() {

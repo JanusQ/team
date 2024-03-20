@@ -13,6 +13,11 @@
         border-bottom: 1px solid #dcd9d9;
         .avatar {
           transform: translateY(-106px);
+
+          img {
+            width: 254px;
+            height: 251px;
+          }
         }
         .top_right {
           margin-left: 36px;

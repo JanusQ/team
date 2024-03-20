@@ -13,7 +13,7 @@ export default function AchievementDetail() {
   return (
     <div className={styles.root}>
       <Row justify={'center'}>
-        <Col span={14}>
+        <Col span={15}>
           <div className="AchievementDetail_container">
             <div className="paper_title_content">
               <h1>{detail.title}</h1>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import styles from './index.module.scss'
-import logo from '@/assets/logo.png'
+import logo from '@/assets/logo_wite.png'
 import { useLangStore } from '@/store/lang'
 import { Button, Row, Col } from 'antd'
 export default function Header({ menus }) {
