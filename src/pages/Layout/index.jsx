@@ -24,7 +24,7 @@ export default function Layout() {
     //   path: "/blog",
     // },
     {
-      label: 'Course',
+      label: 'Courses',
       path: '/course',
     },
     {

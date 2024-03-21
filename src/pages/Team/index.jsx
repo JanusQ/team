@@ -51,7 +51,7 @@ export default function Team() {
       <Row justify={'center'}>
         <Col span={15}>
           <div className="team_container">
-            <Title titleText={'Principle Investigator'} />
+            <Title titleText={'Principle Investigators'} />
             {showData[0].map((item, index) => (
               <Teacher teacherData={item} key={index} type={0} />
             ))}

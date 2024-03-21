@@ -4,7 +4,7 @@ import styles from './index.module.scss'
 import HeaderImage from '@/components/HeaderImage'
 import { Avatar } from 'antd'
 import jianweiyin from '@/assets/image/member/JianweiYin.png'
-import liqianglu from '@/assets/image/member/LiqiangLu.png'
+import LiqiangLu from '@/assets/image/team/liqianglu.png'
 import '@/assets/styles/common.scss'
 import { useLangStore } from '@/store/lang'
 import { Row, Col } from 'antd'
@@ -27,7 +27,7 @@ export default function Course() {
         },
         {
           name: '卢丽强',
-          photo: liqianglu,
+          photo: LiqiangLu,
         },
       ],
       Classhour: '64',
@@ -79,7 +79,7 @@ export default function Course() {
       teacher: [
         {
           name: '卢丽强',
-          photo: liqianglu,
+          photo: LiqiangLu,
         },
       ],
       Classhour: '32',
@@ -105,6 +105,7 @@ export default function Course() {
       book: '参考书：《量子信息与量子计算》（10周年版）- Michael A．Nielsen, Isaac L．Chuang',
     },
   ]
+  let a = ''
   const curseListEn = [
     {
       title: 'Fundamental Theory and Software Systems of Quantum Computing',
@@ -120,9 +121,10 @@ export default function Course() {
         },
         {
           name: 'Liqiang Lu',
-          photo: liqianglu,
+          photo: LiqiangLu,
         },
       ],
+      Instructor: 'Instructors',
       Classhour: '64',
       Credithour: '3',
       outline: [
@@ -132,9 +134,9 @@ export default function Course() {
         '04 Quantum Linear Algebra Basics (III): Eigenvalue Solving, Tensor Product',
         '05 Quantum Linear Algebra Basics (IV): State Space Evolution and Quantum Measurement',
         '06 Universal Quantum Gates, Quantum Turing Machines, Quantum Circuit Model',
-        `'07 Common Quantum Algorithms: Quantum Fourier Transform, Quantum Factorization (Shor's Algorithm)'`,
-        `'08 Common Quantum Algorithms: Quantum Search Algorithm (Grover's Algorithm), VQE Algorithm'`,
-        `'09 Physical Implementation of Quantum Computers and Tianmu Chip (Guest lecture by Professors Zhen Wang and Chao Song from the School of Physics)'`,
+        `07 Common Quantum Algorithms: Quantum Fourier Transform, Quantum Factorization (Shor's Algorithm)`,
+        `08 Common Quantum Algorithms: Quantum Search Algorithm (Grover's Algorithm), VQE Algorithm`,
+        `09 Physical Implementation of Quantum Computers and Tianmu Chip (Guest lecture by Professors Zhen Wang and Chao Song from the School of Physics)`,
         '10 Brief History of Classical Computer Development and Classical Computer Architecture,',
         '11 Quantum Computer Architecture (I): Superconducting Quantum Chip Control Systems,',
         '12 Quantum Computer Architecture (II): Performance Calibration and Optimization of Superconducting Quantum Chips',
@@ -143,8 +145,8 @@ export default function Course() {
         '15 Quantum Computing Compiler (I): Concepts of Quantum Computing Compilation',
         '16 Quantum Computing Compiler (II): Compilation Optimization Methods at the Software Layer of Quantum Computing',
         '17 Quantum Computing Compiler (III): Compilation Optimization Methods at the Hardware Layer of Quantum Computing',
-        `'18 Introduction to IBM Qiskit Quantum Computing Programming Framework'`,
-        `'19 Introduction to Zhejiang University's Taiyuan Quantum Cloud Platform'`,
+        `18 Introduction to IBM Qiskit Quantum Computing Programming Framework`,
+        `19 Introduction to Zhejiang University's Taiyuan Quantum Cloud Platform`,
         '20 Quantum Computing Programming Examples (I)',
         '21 Quantum Computing Programming Examples (II)',
         '22 Discussion: Comparison of Quantum Programming Frameworks and Deep Learning Framework Design Concepts',
@@ -171,9 +173,10 @@ export default function Course() {
       teacher: [
         {
           name: 'Liqiang Lu',
-          photo: liqianglu,
+          photo: LiqiangLu,
         },
       ],
+      Instructor: 'Instructor',
       Classhour: '32',
       Credithour: '2',
       outline: [
@@ -183,8 +186,8 @@ export default function Course() {
         '04 Quantum Linear Algebra Basics (III): Eigenvalue Solving, Tensor Product',
         '05 Quantum Linear Algebra Basics (IV): State Space Evolution and Quantum Measurement',
         '06 Universal Quantum Gates, Quantum Turing Machines, Quantum Circuit Model',
-        `'07 Common Quantum Algorithms: Quantum Fourier Transform, Quantum Factorization (Shor's Algorithm)'`,
-        `'08 Common Quantum Algorithms: Quantum Search Algorithm (Grover's Algorithm), VQE Algorithm'`,
+        `07 Common Quantum Algorithms: Quantum Fourier Transform, Quantum Factorization (Shor's Algorithm)`,
+        `08 Common Quantum Algorithms: Quantum Search Algorithm (Grover's Algorithm), VQE Algorithm`,
         '09 Brief History of Classical Computer Development and Classical Computer Architecture',
         '10 Quantum Computer Architecture (I): Superconducting Quantum Chip Control Systems',
         '11 Quantum Computer Architecture (II): Performance Calibration and Optimization of Superconducting Quantum Chips',
@@ -212,14 +215,14 @@ export default function Course() {
   ]
   const titleListEn = [
     'Course: ',
-    'Semester starting: ',
+    'Semester: ',
     'Course type: ',
     'Study hours: ',
     'Credits: ',
     'Lecturers:',
     'Course overview: ',
-    'Class location: ',
-    'Class time: ',
+    'Location: ',
+    'Time: ',
   ]
   const [titleList, settitleList] = useState(titleListZh)
   useEffect(() => {
@@ -267,7 +270,9 @@ export default function Course() {
                       {item.Credithour}
                     </div>
                     <div className="teacher_content">
-                      <span className="big_weight_text">Instructor:</span>
+                      <span className="big_weight_text">
+                        {item.Instructor}:
+                      </span>
                       <div className="teacher_item_content">
                         {item.teacher.map((item1, index) => (
                           <div key={index} className="teacher_item">

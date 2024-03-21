@@ -13,11 +13,12 @@
         border-bottom: 1px solid #dcd9d9;
         .avatar {
           transform: translateY(-106px);
-
-          img {
-            width: 254px;
-            height: 251px;
-          }
+          width: 254px;
+          height: 251px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
         }
         .top_right {
           margin-left: 36px;

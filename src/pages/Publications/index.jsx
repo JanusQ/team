@@ -124,7 +124,7 @@ export default function Publications() {
         'Mingqian Yu',
         'Andre Python',
         'Yongheng Shang',
-        ' Tingting Li,',
+        ' Tingting Li',
         'Liqiang Lu',
         'Jianwei Yin',
       ],
@@ -257,12 +257,12 @@ export default function Publications() {
     if (lang === 'zh') {
       setPublicationsList(PublicationsListZh)
       setCopyrightList(CopyrightListZh)
-      setPatentsListEn(CopyrightListZh)
+      setPatentsListEn(PatentsListZh)
       settitleList(titleListZh)
     } else {
       setPublicationsList(PublicationsListEn)
       setCopyrightList(CopyrightListEn)
-      setPatentsListEn(CopyrightListEn)
+      setPatentsListEn(PatentsListEn)
       settitleList(titleListEn)
     }
   }, [lang])
@@ -288,7 +288,11 @@ export default function Publications() {
                         {item.title}
                       </div>
                       <div className="Publications_item_author">
-                        {item.author}
+                        {item.author.map((item, index) => (
+                          <span key={index} className="author">
+                            {item},
+                          </span>
+                        ))}
                       </div>
                       <div className="Publications_item_place">
                         {item.place}

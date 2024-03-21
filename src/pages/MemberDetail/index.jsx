@@ -72,8 +72,15 @@ export default function MemberDetail() {
               </div>
               <div className="MemberDetail_right">
                 <h1 className="member_name">{memberData?.name}</h1>
-                <div className="type">{typeList[type]}</div>
-                <div className="introduce">{memberData?.backdrop}</div>
+                <div className="type">
+                  {typeList[type]} ,&nbsp;
+                  {memberData?.backdrop.substring(
+                    memberData?.backdrop.length - 10
+                  )}
+                </div>
+                <div className="introduce">
+                  {memberData?.backdrop.slice(0, -10)}
+                </div>
                 <div className="introduce">
                   <span className="weight_title">{title[0]}:</span>
                   {memberData.ResearchArea}
@@ -106,18 +113,17 @@ export default function MemberDetail() {
             </div>
             {memberData.more && (
               <div className="more_container">
-                <div className="memberData_title">
-                  More papers are listed in
+                <div className="more_text">
+                  More papers are listed in &nbsp;
+                  <span>
+                    <a href={memberData.more} target="_blank">
+                      {memberData.more}
+                    </a>
+                  </span>
                 </div>
-                <div className="conten">
-                  <a
-                    href={memberData.more}
-                    target="_blank"
-                    style={{ color: '#000' }}
-                  >
-                    {memberData.more}
-                  </a>
-                </div>
+                {/* <div className="conten">
+                
+                </div> */}
               </div>
             )}
 

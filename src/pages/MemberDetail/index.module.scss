@@ -47,6 +47,7 @@
           font-size: 18px;
           color: #666666;
           line-height: 31px;
+          margin-right: 5px;
         }
       }
       .memberData_title {
@@ -66,6 +67,8 @@
         line-height: 31px;
         .Publications_item {
           text-align: justify;
+          white-space: pre-line;
+          text-indent: -14px;
           &::before {
             content: '\2022'; /* 使用 Unicode 编码表示圆点 */
             margin-right: 5px; /* 调整圆点与文本的距离 */
@@ -95,7 +98,22 @@
         }
       }
       .more_container {
+        margin-bottom: 10px;
         font-family: PingFang-SC-Regular;
+        font-weight: 400;
+        font-size: 18px;
+        color: #666666;
+        line-height: 31px;
+        text-align: justify;
+        .more_text {
+        }
+        a {
+          color: #666666;
+          &:hover {
+            color: #000;
+            font-weight: 800;
+          }
+        }
       }
     }
   }

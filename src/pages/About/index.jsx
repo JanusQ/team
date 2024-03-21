@@ -108,7 +108,7 @@ export default function About() {
   for (let index = 0; index < researchLists.length; index++) {
     tabListNoTitle.push({
       key: researchLists[index].title.substring(0, 10),
-      label: researchLists[index].title.substring(0, 30),
+      label: researchLists[index].title,
     })
     contentListNoTitle[researchLists[index].title.substring(0, 10)] = (
       <div>
@@ -180,7 +180,7 @@ export default function About() {
       source: 'Source: China News Network',
       image: 'image',
       title:
-        'Zhejiang University released "Mogan 1" and "Tianmu 1" superconducting quantum chips',
+        'Zhejiang University released “Mogan 1” and “Tianmu 1” superconducting quantum chips',
       link: 'https://hic.zju.edu.cn/2021/1220/c56173a2452801/page.htm',
     },
     {
@@ -189,7 +189,7 @@ export default function About() {
       source: 'Source: China News Network',
       image: 'image',
       title:
-        '"Tianmu 1" superconducting quantum chip application results released!',
+        '“Tianmu 1” superconducting quantum chip application results released!',
       link: 'https://hic.zju.edu.cn/2022/0723/c56130a2605554/page.htm',
     },
   ]
@@ -461,7 +461,7 @@ export default function About() {
                       <div className="pater_content">{item.Abstract}</div>
                       <div className="paper_author"></div>
                       <div className="paper_place">
-                        <span className="place">News & Views </span>
+                        {/* <span className="place">News & Views </span> */}
                         {item.place}
                       </div>
                       {/* <div className="paper_contetn">{item.content}</div> */}

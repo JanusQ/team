@@ -28,7 +28,7 @@ export default function MemberDetail() {
   ]
   const [title, setTitle] = useState([titleZh])
   const titleZh1 = ['办公地址', '研究方向', '电子邮箱', '个人主页']
-  const titleEn1 = ['Address', 'Research Area', 'Email', 'Personal homepage']
+  const titleEn1 = ['Address', 'Research Area', 'Email', 'Personal Homepage']
   const [title1, setTitle1] = useState(titleZh1)
   const {
     state: { key, type },

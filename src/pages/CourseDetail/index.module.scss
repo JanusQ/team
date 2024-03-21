@@ -2,21 +2,18 @@
   :global {
     .course_detail_container {
       // width: 70%;
-      font-family: 'Open Sans';
+      font-family: PingFang-SC-Regular;
 
       margin: 50px 0;
       .big_weight_text {
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 25px;
-        font-family: 'Open Sans ExtraBold';
+        font-family: PingFang-SC-Bold;
+        font-weight: bold;
+        font-size: 20px;
+        color: #035b9e;
+        line-height: 31px;
+        margin-right: 5px;
       }
       .course_item {
-        // padding: 20px;
-        // box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
-        // border-radius: 30px;
-        // margin: 50px;
-        // cursor: pointer;
         margin: 50px;
         font-size: 16px;
         .teacher_content {
@@ -45,15 +42,49 @@
         font-size: 18px;
       }
       .teacher_content {
-        .teacher_item {
-          height: 90px;
-          .teacher_name {
-            line-height: 90px;
-          }
-
+        margin-top: 50px;
+        border-top: 1px solid #dcd9d9;
+        height: 190px;
+        padding: 35px 0 50px 0;
+        .teacher_item_content {
+          margin-top: 20px;
           display: flex;
-          .ant-avatar img {
-            height: 128%;
+          .teacher_item {
+            display: flex;
+            height: 90px;
+            .teacher_name {
+              height: 90px;
+              margin-left: 20px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              text-align: left;
+              .name {
+                font-family: PingFang-SC-Medium;
+                font-weight: 500;
+                font-size: 18px;
+                color: #000000;
+                line-height: 31px;
+              }
+              .Investigator_text {
+                font-family: PingFang-SC-Regular;
+                font-weight: 400;
+                font-size: 14px;
+                color: #666666;
+                line-height: 26px;
+              }
+            }
+            .teacher_photo {
+              width: 78px;
+              height: 91px;
+              .ant-avatar-image {
+                // height: 77px !important;
+              }
+              .ant-avatar img {
+                transform: translateY(14px);
+                height: 136%;
+              }
+            }
           }
         }
       }
@@ -70,10 +101,18 @@
           line-height: 44px;
           font-family: 'Open Sans ExtraBold';
         }
+        .course_text {
+          font-family: PingFang-SC-Regular;
+          font-weight: 400;
+          font-size: 18px;
+          color: #666666;
+          line-height: 31px;
+        }
         .course_intro {
           text-align: justify;
           font-size: 16px;
           line-height: 29px;
+          margin-top: 50px;
         }
       }
     }

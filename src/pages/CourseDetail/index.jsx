@@ -5,13 +5,14 @@ import { Divider, List, Typography } from 'antd'
 import styles from './index.module.scss'
 import { useLangStore } from '@/store/lang'
 import { Row, Col } from 'antd'
-
+import Title from '@/components/Title'
 export default function CourseDetail() {
   const { lang } = useLangStore()
 
   const {
     state: { courseData },
   } = useLocation()
+  console.log(courseData)
   const titleListZh = [
     '开课学期: ',
     '上课地点: ',
@@ -25,10 +26,10 @@ export default function CourseDetail() {
   ]
   const titleListEn = [
     'Semester: ',
-    'Class location: ',
-    'Class time: ',
-    'Course type: ',
-    'Credit hours: ',
+    'Location: ',
+    'Time: ',
+    'Course Type: ',
+    'Study Hours: ',
     'Credits: ',
     'Lecturers: ',
     'Course syllabus: ',
@@ -46,62 +47,70 @@ export default function CourseDetail() {
   return (
     <div className={styles.root}>
       <Row justify={'center'}>
-        <Col span={14}>
+        <Col span={15}>
           <div className="course_detail_container">
             <div className="course_intorduce">
-              <h1 className="title">{courseData.title}</h1>
-              <Divider style={{ margin: '30px 0' }} />
+              <Title titleText={courseData.title} />
               <div className="course_intro">{courseData.intro}</div>
               <Divider style={{ margin: '30px 0' }} />
-              <div className="course_time">
+              <div className="course_text">
                 <span className="big_weight_text">{titleList[0]}</span>
                 {courseData.time}
               </div>
-              <div className="course_time">
+              <div className="course_text">
                 <span className="big_weight_text">{titleList[1]}</span>
                 {courseData.place}
               </div>
-              <div className="course_time">
+              <div className="course_text">
                 <span className="big_weight_text">{titleList[2]}</span>
                 {courseData.classTime}
               </div>
-              <div className="course_type">
+              <div className="course_type course_text">
                 <span className="big_weight_text">{titleList[3]}</span>
                 {courseData.type}
               </div>
-              <div className="course_type">
+              <div className="course_type course_text">
                 <span className="big_weight_text">{titleList[4]}</span>
                 {courseData.Classhour}
               </div>
-              <div className="course_type">
+              <div className="course_type course_text">
                 <span className="big_weight_text">{titleList[5]}</span>
                 {courseData.Credithour}
               </div>
-              <Divider style={{ margin: '30px 0' }} />
               <div className="teacher_content">
-                {courseData.teacher.map((item1, index) => (
-                  <div key={index} className="teacher_item">
-                    <div className="teacher_name">
-                      <span className="big_weight_text">{titleList[6]}</span>
-                      {item1.name}
+                <span className="big_weight_text">
+                  {courseData.Instructor}:
+                </span>
+                <div className="teacher_item_content">
+                  {courseData.teacher.map((item1, index) => (
+                    <div key={index} className="teacher_item">
+                      <div className="teacher_photo">
+                        <Avatar
+                          size={80}
+                          src={<img src={item1.photo} alt="avatar" />}
+                        />
+                      </div>
+                      <div className="teacher_name">
+                        <div className="name">{item1.name}</div>
+                        <div className="Investigator_text">
+                          Principle Investigator
+                        </div>
+                      </div>
                     </div>
-                    <div className="teacher_photo">
-                      <Avatar
-                        size={60}
-                        src={<img src={item1.photo} alt="avatar" />}
-                      />
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-              <Divider style={{ margin: '30px 0' }} />
             </div>
             <List
-              header={<div>{titleList[7]}</div>}
+              header={
+                <div style={{ fontFamily: 'PingFang-SC-Bold' }}>
+                  {titleList[7]}
+                </div>
+              }
               bordered
               dataSource={Array.from(courseData.outline)}
               renderItem={(item) => (
-                <List.Item style={{ fontFamily: 'Open Sans' }}>
+                <List.Item style={{ fontFamily: 'PingFang-SC-Regular' }}>
                   <Typography.Text mark></Typography.Text> {item}
                 </List.Item>
               )}

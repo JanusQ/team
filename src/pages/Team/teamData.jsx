@@ -1,5 +1,5 @@
 import JianweiYin from '@/assets/image/member/JianweiYin.png'
-import LiqiangLu from '@/assets/image/member/LiqiangLu.png'
+import LiqiangLu from '@/assets/image/team/liqianglu.png'
 import SiweiTan from '@/assets/image/member/SiweiTan.jpg'
 import TingtingLi from '@/assets/image/member/TingtingLi.jpg'
 import ChenningTao from '@/assets/image/member/ChenningTao.jpg'

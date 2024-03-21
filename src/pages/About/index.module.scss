@@ -56,6 +56,11 @@
             color: #035b9e;
             line-height: 21px;
             text-align: justifyLeft;
+
+            white-space: pre-line;
+          }
+          :global(.ant-tabs-tab) {
+            width: 25%;
           }
           .researchLists_title {
             font-family: PingFang-SC-Heavy;
@@ -81,6 +86,7 @@
 
         .news_item {
           display: flex;
+          // justify-content: center;
           font-size: 22px;
           height: 165px;
           border-bottom: 3px solid #dcd9d9;
@@ -95,6 +101,7 @@
             text-align: justifyLeft;
           }
           .center_title {
+            width: 700px;
             a {
               font-family: PingFang-SC-Bold;
               color: #000;
@@ -104,6 +111,7 @@
               line-height: 33px;
               text-align: justifyLeft;
               text-decoration: underline;
+              quotes: '«' '»' '‘' '’';
             }
             .source {
               margin-top: 30px;
@@ -166,7 +174,11 @@
               color: #666666;
               line-height: 22px;
               text-align: justifyLeft;
-              overflow: hidden; /* 超出部分隐藏 */
+              display: -webkit-box; /* 使用flexbox布局 */
+              -webkit-box-orient: vertical; /* 垂直方向排列 */
+              -webkit-line-clamp: 4; /* 显示的行数 */
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
             .paper_author {
               margin-top: 56px;
