@@ -1,4 +1,4 @@
-import{g as M,r as V,a3 as B,E as $,f as g,an as ne,w as se,ao as Y,ap as G,aq as ir,ar,a8 as Me,as as A,at as sr,U as or,a7 as $e,b as Ae,_ as Ye,d as oe}from"./index-CVOp1jj8.js";import{_ as le,a as z}from"./asyncToGenerator-Cva8h4T0.js";var ur=`accept acceptCharset accessKey action allowFullScreen allowTransparency
+import{g as M,r as V,a3 as B,E as $,f as g,an as ne,w as se,ao as Y,ap as G,aq as ir,ar,a8 as Me,as as A,at as sr,U as or,a7 as $e,b as Ae,_ as Ye,d as oe}from"./index-Nr0-Pw1z.js";import{_ as le,a as z}from"./asyncToGenerator-DkuJYNKx.js";var ur=`accept acceptCharset accessKey action allowFullScreen allowTransparency
     alt async autoComplete autoFocus autoPlay capture cellPadding cellSpacing challenge
     charSet checked classID className colSpan cols content contentEditable contextMenu
     controls coords crossOrigin data dateTime default defer dir disabled download draggable
