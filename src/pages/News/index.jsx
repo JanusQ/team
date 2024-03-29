@@ -35,28 +35,40 @@ export default function News() {
   const newToOldEn = [
     {
       time: 'Jul 2022',
+      type: 'Article',
+      source: 'Source: China News Network',
+      image: 'image',
       title:
-        '"Tianmu 1" superconducting quantum chip application results released!',
+        '“Tianmu 1” superconducting quantum chip application results released!',
       link: 'https://hic.zju.edu.cn/2022/0723/c56130a2605554/page.htm',
     },
     {
       time: 'Dec 2021',
+      type: 'Article',
+      source: 'Source: China News Network',
+      image: 'image',
       title:
-        'Zhejiang University released "Mogan 1" and "Tianmu 1" superconducting quantum chips',
+        'Zhejiang University released “Mogan 1” and “Tianmu 1” superconducting quantum chips',
       link: 'https://hic.zju.edu.cn/2021/1220/c56173a2452801/page.htm',
     },
   ]
   const oldToNewEn = [
     {
       time: 'Dec 2021',
+      type: 'Article',
+      source: 'Source: China News Network',
+      image: 'image',
       title:
-        'Zhejiang University released "Mogan 1" and "Tianmu 1" superconducting quantum chips',
+        'Zhejiang University released “Mogan 1” and “Tianmu 1” superconducting quantum chips',
       link: 'https://hic.zju.edu.cn/2021/1220/c56173a2452801/page.htm',
     },
     {
       time: 'Jul 2022',
+      type: 'Article',
+      source: 'Source: China News Network',
+      image: 'image',
       title:
-        '"Tianmu 1" superconducting quantum chip application results released!',
+        '“Tianmu 1” superconducting quantum chip application results released!',
       link: 'https://hic.zju.edu.cn/2022/0723/c56130a2605554/page.htm',
     },
   ]

@@ -65,24 +65,44 @@
             visibility: hidden;
           }
           li {
-            font-family: PingFang-SC-Bold !important;
+            font-family: PingFang-SC-Regular !important;
             font-size: 16px;
             line-height: 24px;
           }
           .menu_item {
             color: #fff;
-            font-family: Lato;
+            font-family: PingFang-SC-Medium;
             padding: 10px;
             font-weight: 900;
             font-size: 16px;
-            &:hover {
-              // color: rgb(0, 63, 136);
-              border-bottom: 3px solid #3877d1;
+            border-bottom: 3px solid #031329;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            .path_active {
+              width: 34px;
+              height: 2px;
+              background-color: #3877d1;
+              visibility: hidden;
+              margin-top: 5px;
             }
-          }
-          .path_active {
-            // color: rgb(0, 63, 136);
-            border-bottom: 3px solid #3877d1;
+            .path_active_show {
+              display: block;
+              width: 34px;
+              height: 2px;
+              background-color: #3877d1;
+              margin-top: 5px;
+            }
+            &:hover {
+              .active {
+                width: 34px;
+                height: 2px;
+                background-color: #3877d1;
+                visibility: visible;
+                margin-top: 5px;
+              }
+            }
           }
         }
       }

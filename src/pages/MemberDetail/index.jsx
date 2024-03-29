@@ -101,7 +101,19 @@ export default function MemberDetail() {
                 </div>
               </div>
             </div>
-            <div className="memberData_title">{title[3]}</div>
+            {memberData.ResearchProjects && (
+              <div className="reach_project">
+                <div className="memberData_title">Researchv Projects:</div>
+                <div className="ResearchProjects_content">
+                  {memberData.ResearchProjects.map((item, index) => (
+                    <div className="ResearchProjects_item" key={index}>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            <div className="memberData_title">{title[3]}:</div>
             <div className="Publications_content">
               {memberData.Publications.length > 0
                 ? memberData.Publications?.map((item, index) => (

@@ -39,7 +39,7 @@ export default function MemberDetail() {
   const [meberLangType, setMeberLangType] = useState(ZH)
   let memberData = meberLangType[type].filter((item) => key == item.key)[0]
   const typeList = ['', 'Ph.D', 'Master', 'Undergraduate']
-  console.log(memberData, 'memberData')
+  // console.log(memberData, 'memberData')
   useEffect(() => {
     window.scrollTo(0, 0)
     if (lang === 'zh') {

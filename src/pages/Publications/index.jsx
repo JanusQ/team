@@ -290,7 +290,7 @@ export default function Publications() {
                       <div className="Publications_item_author">
                         {item.author.map((item, index) => (
                           <span key={index} className="author">
-                            {item},
+                            {item},&nbsp;
                           </span>
                         ))}
                       </div>

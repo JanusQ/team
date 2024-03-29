@@ -41,7 +41,7 @@ export default function AchievementDetail() {
                   }}
                   key={index}
                 >
-                  {item}
+                  &nbsp; &nbsp; {item} &nbsp; &nbsp;
                 </Button>
               ))}
             </div>

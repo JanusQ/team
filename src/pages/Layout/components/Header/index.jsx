@@ -45,14 +45,15 @@ export default function Header({ menus }) {
               <Col className="menuContent" lg={20} md={19} sm={0} xs={0}>
                 {menus.map(({ label, path }) => (
                   <Link key={path} style={{ color: '#fff' }} to={path}>
-                    <li
-                      className={
-                        location.pathname === path
-                          ? 'path_active menu_item'
-                          : 'menu_item'
-                      }
-                    >
-                      {label}
+                    <li className="menu_item">
+                      <div className="lable"> {label}</div>
+                      <div
+                        className={
+                          location.pathname === path
+                            ? 'path_active_show active'
+                            : 'path_active active'
+                        }
+                      ></div>
                     </li>
                   </Link>
                 ))}

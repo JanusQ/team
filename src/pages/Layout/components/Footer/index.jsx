@@ -62,8 +62,8 @@ export default function Footer() {
                   <p className="footer_Link_title">{footerText[0]}</p>
                   <Link
                     style={{ color: '#1a1b1f' }}
-                    to="/memberDetail"
-                    state={{ name: 'jianweiyin' }}
+                    to="/teacherDetail"
+                    state={{ key: 'Jianwei Yin', type: 0 }}
                   >
                     <p>Jianwei Yin</p>
                   </Link>

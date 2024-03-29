@@ -1,18 +1,4 @@
-@font-face {
-  font-family: Lato;
-  src: url("./Lato-Regular.ttf");
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  src: url('./OpenSans-Regular.ttf');
-}
-@font-face {
-  font-family: 'Open Sans ExtraBold';
-  font-style: normal;
-  font-weight: 700;
-  src: url('./OpenSansExtraBold.ttf');
-}
+
 @font-face {
   font-family: 'PingFang-SC-Regular';
   font-style: normal;

@@ -1,5 +1,5 @@
 import JianweiYin from '@/assets/image/member/JianweiYin.png'
-import LiqiangLu from '@/assets/image/team/liqianglu.png'
+import LiqiangLu from '@/assets/image/team/liqianglu.jpg'
 import SiweiTan from '@/assets/image/member/SiweiTan.jpg'
 import TingtingLi from '@/assets/image/member/TingtingLi.jpg'
 import ChenningTao from '@/assets/image/member/ChenningTao.jpg'
@@ -16,7 +16,7 @@ import QifanJiang from '@/assets/image/member/QifanJiang.jpg'
 import LiHengyi from '@/assets/image/member/LiHengyi.jpg'
 import DebinXiang from '@/assets/image/member/DebinXiang.png'
 import KaiwenZhou from '@/assets/image/member/KaiwenZhou.jpg'
-
+import guofangxu from '@/assets/image/member/guofangxu.png'
 export const teacher = [
   {
     key: 'Jianwei Yin',
@@ -670,9 +670,30 @@ export const Undergraduate = [
     Experiences: [
       '2020.9-present, undergraduate, School of Computer and Artificial Intelligence, Wuhan University of Technology.',
     ],
-    Publications: [[]],
+    Publications: [],
     Meetings: [],
     Awards: [],
+  },
+  {
+    key: 'Fangxu Guo',
+    name: 'Fangxu Guo',
+    photo: guofangxu,
+
+    backdrop: `	School of Computer Science, Northwestern Polytechnical University
+    Grad. 2020`,
+    ResearchArea: ' Quantum Computing, Computer Architecture, AI Accelerators',
+    Email: 'gfx2082482956_at_gmail.com',
+    Experiences: [
+      '2020.9-present, undergraduate, School of Computer Science, Northwestern Polytechnical University.',
+    ],
+    Publications: [],
+    Meetings: [],
+    Awards: [
+      'Meritorious Winner, 2022 Mathematical Contest in Modeling.',
+      'Excellence Award, 6th National Student Computer System Capability Challenge (Loongson Cup).',
+      'Third Prize, 2021 National English Competition for College Students.',
+      'Second-Class Scholarship of Northwestern Polytechnical University in 2020-2021 and 2021-2022.',
+    ],
   },
 ]
 export const UndergraduateZh = [
@@ -752,5 +773,26 @@ export const UndergraduateZh = [
     Publications: [],
     Meetings: [],
     Awards: [],
+  },
+  {
+    key: 'Fangxu Guo',
+    name: 'Fangxu Guo',
+    photo: guofangxu,
+
+    backdrop: `	School of Computer Science, Northwestern Polytechnical University
+    Grad. 2020`,
+    ResearchArea: ' Quantum Computing, Computer Architecture, AI Accelerators',
+    Email: 'gfx2082482956_at_gmail.com',
+    Experiences: [
+      '2020.9-present, undergraduate, School of Computer Science, Northwestern Polytechnical University.',
+    ],
+    Publications: [],
+    Meetings: [],
+    Awards: [
+      'Meritorious Winner, 2022 Mathematical Contest in Modeling.',
+      'Excellence Award, 6th National Student Computer System Capability Challenge (Loongson Cup).',
+      'Third Prize, 2021 National English Competition for College Students.',
+      'Second-Class Scholarship of Northwestern Polytechnical University in 2020-2021 and 2021-2022.',
+    ],
   },
 ]

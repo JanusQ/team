@@ -58,20 +58,7 @@ export default function About() {
   const researchListEn = [
     {
       title: 'Taiyuan Superconducting Quantum Computing Cloud Platform',
-      content: `In July 2022, the research group launched the first superconducting
-          quantum computing cloud platform named "Taiyuan 1," which supports
-          computational visualization and distributed parallel sAcheduling. This
-          platform enables remote access to Zhejiang University's independently
-          developed "Tianmu 1" quantum chip, providing 20-qubit computing power.
-          The cloud platform, accessible via the domain janusq.zju.edu.cn, is
-          open to the public. By employing a visual programming environment,
-          this platform reduces the barriers to entry for quantum computing,
-          leading the international research wave in the design of quantum
-          computer software, hardware, system architecture, and algorithm
-          development. Notably, renowned universities and leading companies both
-          domestically and internationally, including Microsoft, the University
-          of Sydney, Huawei, and Tencent, have registered to use this cloud
-          platform.`,
+      content: `In July 2022, the research group launched the first superconducting quantum computing cloud platform named “Taiyuan 1”, which supports computational visualization and distributed parallel scheduling. This platform enables remote access to Zhejiang University's independently developed “Tianmu 1” quantum chip, providing 20-qubit computing power. The cloud platform, accessible via the domain janusq.zju.edu.cn, is open to the public. By employing a visual programming environment, this platform reduces the barriers to entry for quantum computing, leading the international research wave in the design of quantum computer software, hardware, system architecture, and algorithm development. Notably, renowned universities and leading companies both domestically and internationally, including Microsoft, the University of Sydney, Huawei, and Tencent, have registered to use this cloud platform.`,
       image: tinyml,
       titleColor: 'rgb(139, 176, 210)',
     },
@@ -93,7 +80,7 @@ export default function About() {
     {
       title: 'Applications of Quantum Computing',
       content:
-        'We explore the intersection of "Quantum + X" applications across various fields such as finance, biomedical pharmaceutical simulations, machine learning, artificial intelligence, and more. The research group is currently leading national and provincial-level projects related to these endeavors.',
+        'We explore the intersection of “Quantum + X” applications across various fields such as finance, biomedical pharmaceutical simulations, machine learning, artificial intelligence, and so on. The research group is currently leading national and provincial-level projects related to these domains.',
       image: tinyml,
       titleColor: 'rgb(0, 63, 136)',
     },
@@ -113,7 +100,9 @@ export default function About() {
     contentListNoTitle[researchLists[index].title.substring(0, 10)] = (
       <div>
         <p className="researchLists_title">{researchLists[index].title}</p>
-        <p className="researchLists_content">{researchLists[index].content}</p>
+        <p className="researchLists_content" style={{ textAlign: 'justify' }}>
+          {researchLists[index].content}
+        </p>
       </div>
     )
   }
