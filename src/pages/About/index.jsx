@@ -21,7 +21,7 @@ export default function About() {
   const whoAreWeEn = {
     title: 'Who We Are',
     content:
-      'The Taiyuan Quantum Computing Research Group is a quantum computing team from the College of Computer Science and Technology at Zhejiang University. This research group is an efficient and dynamic team dedicated to developing software and architecture for future-oriented quantum computing. We are at the forefront of international research in fields such as superconducting quantum control systems, quantum compilers, and quantum algorithms, constantly striving to surpass boundaries and advance the capabilities of quantum computing.',
+      'Taiyuan Quantum Computing Research Group comes from the College of Computer Science and Technology at Zhejiang University. The team members are dedicated to developing software and architecture for future-oriented quantum computing, which is at the forefront of international research in fields such as superconducting quantum control systems, quantum compilers, and quantum algorithms, constantly striving to surpass boundaries and advance the capabilities of quantum computing.',
   }
   const [whoAreWe, setWhoAreWe] = useState(whoAreWeZh)
   //  research
@@ -57,21 +57,20 @@ export default function About() {
   ]
   const researchListEn = [
     {
-      title: 'Taiyuan Superconducting Quantum Computing Cloud Platform',
+      title: 'Taiyuan Quantum Computing Cloud Platform',
       content: `In July 2022, the research group launched the first superconducting quantum computing cloud platform named “Taiyuan 1”, which supports computational visualization and distributed parallel scheduling. This platform enables remote access to Zhejiang University's independently developed “Tianmu 1” quantum chip, providing 20-qubit computing power. The cloud platform, accessible via the domain janusq.zju.edu.cn, is open to the public. By employing a visual programming environment, this platform reduces the barriers to entry for quantum computing, leading the international research wave in the design of quantum computer software, hardware, system architecture, and algorithm development. Notably, renowned universities and leading companies both domestically and internationally, including Microsoft, the University of Sydney, Huawei, and Tencent, have registered to use this cloud platform.`,
       image: tinyml,
       titleColor: 'rgb(139, 176, 210)',
     },
     {
-      title:
-        'Full-stack Quantum Architecture Framework for Software and Hardware',
+      title: 'Full-stack Quantum Architecture Framework',
       content:
         'The realization of quantum computing relies on a synergistic design of software and hardware. Our research group has introduced the first full-stack quantum architecture framework in Zhejiang University. This framework is built upon independently developed programming languages, frameworks, compilers, instruction sets, control devices, and chips. The Taiyuan Quantum Architecture introduces several optimization techniques, including interactive programming through visualization, chip virtualization, waveform acceleration based on reuse, and pipeline design, achieving over 90% chip utilization.',
       image: tinyml,
       titleColor: 'rgb(0, 63, 136)',
     },
     {
-      title: 'Taiyuan Quantum Software Optimization Platform',
+      title: 'Taiyuan Quantum Circuit Optimization Software',
       content:
         'The Taiyuan Quantum Software Optimization Platform achieves optimization across the entire quantum application lifecycle, from compilation and deployment to control and readout processes. This platform introduces the first configurable self-optimizing compilation technology, supporting visual compiler configuration and adaptive analysis for compilation quality and latency. It integrates a range of technologies such as quantum computer cluster optimization, quantum circuit noise analysis, automatic synthesis and correction of quantum circuits, and acceleration of quantum waveform compilation.',
       image: tinyml,
@@ -94,10 +93,10 @@ export default function About() {
   let contentListNoTitle = {}
   for (let index = 0; index < researchLists.length; index++) {
     tabListNoTitle.push({
-      key: researchLists[index].title.substring(0, 10),
+      key: researchLists[index].title,
       label: researchLists[index].title,
     })
-    contentListNoTitle[researchLists[index].title.substring(0, 10)] = (
+    contentListNoTitle[researchLists[index].title] = (
       <div>
         <p className="researchLists_title">{researchLists[index].title}</p>
         <p className="researchLists_content" style={{ textAlign: 'justify' }}>
@@ -109,6 +108,7 @@ export default function About() {
 
   const onTab1Change = (key) => {
     setActiveTabKey1(key)
+    console.log(key, 'key')
   }
   const options = [
     {
