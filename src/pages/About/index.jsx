@@ -85,9 +85,7 @@ export default function About() {
     },
   ]
   const [researchLists, setresearchLists] = useState(researchListEn)
-  const [activeTabKey1, setActiveTabKey1] = useState(
-    researchLists[0].title.substring(0, 10)
-  )
+  const [activeTabKey1, setActiveTabKey1] = useState(researchLists[0].title)
 
   const tabListNoTitle = []
   let contentListNoTitle = {}
@@ -108,7 +106,7 @@ export default function About() {
 
   const onTab1Change = (key) => {
     setActiveTabKey1(key)
-    console.log(key, 'key')
+    // console.log(key, 'key')
   }
   const options = [
     {
