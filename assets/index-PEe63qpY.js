@@ -1,0 +1,1 @@
+import{j as e}from"./index-CfBj3TKn.js";import{s}from"./common-Dq4LeoVy.js";function i(){return e.jsx("div",{className:s.root,children:e.jsxs("div",{className:"header_image",children:[e.jsx("h1",{className:"hero-heading",children:"Towards Noise-tolerant"}),e.jsx("h1",{className:"hero-heading",children:"Quantum Computing"})]})})}export{i as H};

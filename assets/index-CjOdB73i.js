@@ -1,1 +1,0 @@
-import{u as e,j as a}from"./index-InASkw09.js";function i(){const{pdfUrl:t}=e().state;return a.jsx("iframe",{src:`/team/${t}`,type:"application/pdf",width:"100%",style:{height:"calc(100vh - 100px)"}})}export{i as default};
