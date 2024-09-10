@@ -1,0 +1,216 @@
+.root {
+  :global {
+    min-height: 800px;
+    .header_image {
+      background-color: transparent;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('@/assets/image/banner/banner1.jpg');
+      // background-position: 0 0, 30% 35%;
+      background-repeat: repeat, repeat;
+      background-size: auto, cover;
+      background-attachment: scroll, scroll;
+      border-bottom: 1px solid #e4ebf3;
+      padding: 194px 100px;
+      // height: 509px;
+      padding-right: 235px;
+      position: relative;
+      overflow: visible;
+      .hero-heading {
+        color: #fff;
+        text-align: right;
+        font-family: Exo, sans-serif;
+        font-size: 40px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 60px;
+      }
+    }
+    .about_container {
+      margin-top: 103px;
+      width: 100%;
+      .who_we_are {
+        .who_we_are_title {
+          font-family: PingFang-SC-Regular;
+        }
+        .who_we_are_content {
+          font-family: PingFang-SC-Regular;
+          margin-top: 40px;
+          font-weight: 400;
+          font-size: 18px;
+          color: #666666;
+          line-height: 35px;
+          text-align: justifyLeft;
+        }
+      }
+      .we_work_on {
+        margin-top: 120px;
+        font-family: 'Open Sans';
+        .we_work_on_content {
+          margin-top: 45px;
+          :global(.ant-tabs-ink-bar-animated) {
+            background-color: #035b9e;
+          }
+          :global(.ant-tabs-tab-btn) {
+            font-family: PingFang-SC-Bold;
+            font-size: 15px;
+            color: #035b9e;
+            line-height: 21px;
+            text-align: justifyLeft;
+
+            white-space: pre-line;
+          }
+          :global(.ant-tabs-tab) {
+            width: 25%;
+          }
+          .researchLists_title {
+            font-family: PingFang-SC-Heavy;
+            font-weight: 800;
+            font-size: 23px;
+            color: #035b9e;
+            line-height: 32px;
+            text-align: justifyLeft;
+            padding: 10px 0;
+          }
+          .researchLists_content {
+            font-family: PingFang-SC-Medium;
+            font-weight: 500;
+            font-size: 18px;
+            color: #666666;
+            line-height: 33px;
+            text-align: justifyLeft;
+          }
+        }
+      }
+      .news {
+        margin-top: 106px;
+
+        .news_item {
+          display: flex;
+          // justify-content: center;
+          font-size: 22px;
+          height: 165px;
+          border-bottom: 3px solid #dcd9d9;
+          padding: 25px 0;
+          .left_item {
+            width: 125px;
+            font-family: PingFang-SC-Regular;
+            font-weight: 400;
+            font-size: 18px;
+            color: #666666;
+            line-height: 33px;
+            text-align: justifyLeft;
+          }
+          .center_title {
+            width: 700px;
+            a {
+              font-family: PingFang-SC-Bold;
+              color: #000;
+              font-weight: bold;
+              font-size: 20px;
+              color: #000000;
+              line-height: 33px;
+              text-align: justifyLeft;
+              text-decoration: underline;
+              quotes: '«' '»' '‘' '’';
+            }
+            .source {
+              margin-top: 30px;
+              font-family: PingFang-SC-Bold;
+              font-weight: 400;
+              font-size: 16px;
+              color: #666666;
+              line-height: 33px;
+              text-align: justifyLeft;
+            }
+          }
+          .right_img {
+            width: 253px;
+            height: 138px;
+          }
+        }
+      }
+      .paper {
+        margin-top: 106px;
+        .paper_content {
+          margin-top: 26px;
+          display: flex;
+          a {
+            color: #000;
+          }
+          .paper_contetn_item {
+            margin: 10px;
+            cursor: pointer;
+            .paper_image_content {
+              height: 212px;
+              width: 100%;
+              box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+              &:hover {
+                transform: translate3d(0, -5px, 0);
+              }
+              .paper_image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            .paper_title {
+              font-family: PingFang-SC-Bold;
+              font-weight: bold;
+              font-size: 17px;
+              color: #000000;
+              line-height: 25px;
+              text-align: justifyLeft;
+              margin-top: 12px;
+              text-decoration: underline;
+            }
+            .pater_content {
+              height: 82px;
+              margin-top: 40px;
+              font-family: PingFang-SC-Regular;
+              font-weight: 400;
+              font-size: 15px;
+              color: #666666;
+              line-height: 22px;
+              text-align: justifyLeft;
+              display: -webkit-box; /* 使用flexbox布局 */
+              -webkit-box-orient: vertical; /* 垂直方向排列 */
+              -webkit-line-clamp: 4; /* 显示的行数 */
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .paper_author {
+              margin-top: 56px;
+            }
+            .paper_place {
+              font-weight: 400;
+              font-size: 16px;
+              color: #666666;
+              .place {
+                font-family: PingFang-SC-Regular;
+                font-weight: 600;
+                font-size: 16px;
+                color: #000000;
+                line-height: 24px;
+              }
+            }
+            .paper_contetn {
+              margin-top: 10px;
+              font-size: 1rem;
+              line-height: 1.75em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes moveDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}

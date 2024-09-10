@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import styles from './index.module.scss'
-import HeaderImage from '@/components/HeaderImage'
-import { Divider, Avatar } from 'antd'
-import '@/assets/styles/common.scss'
-import Teacher from './component/Teacher'
-import Student from './component/Student'
-import Title from '@/components/Title'
-import { Row, Col } from 'antd'
+import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import styles from "./index.module.scss"
+import HeaderImage from "@/components/HeaderImage"
+import { Divider, Avatar } from "antd"
+import "@/assets/styles/common.scss"
+import Teacher from "./component/Teacher"
+import Student from "./component/Student"
+import Title from "@/components/Title"
+import { Row, Col } from "antd"
 import {
   teacher,
   teacherZh,
@@ -17,8 +17,8 @@ import {
   masterZh,
   Undergraduate,
   UndergraduateZh,
-} from './teamData.jsx'
-import { useLangStore } from '@/store/lang'
+} from "./teamData.jsx"
+import { useLangStore } from "@/store/lang"
 
 export default function Team() {
   const { lang } = useLangStore()
@@ -27,7 +27,7 @@ export default function Team() {
   const ZH = [teacherZh, PhDZh, masterZh, UndergraduateZh]
   const [showData, setshowData] = useState(ZH)
   useEffect(() => {
-    if (lang === 'zh') {
+    if (lang === "zh") {
       setshowData(ZH)
     } else {
       setshowData(EN)
@@ -35,28 +35,49 @@ export default function Team() {
   }, [lang])
   // 获取上次滚动位置并将页面滚动到该位置
   window.onload = function () {
-    const scrollPosition = sessionStorage.getItem('scrollPosition')
+    const scrollPosition = sessionStorage.getItem("scrollPosition")
     if (scrollPosition) {
       window.scrollTo(0, scrollPosition)
     }
   }
 
   // 存储当前滚动位置
-  window.addEventListener('beforeunload', function () {
-    sessionStorage.setItem('scrollPosition', window.pageYOffset)
+  window.addEventListener("beforeunload", function () {
+    sessionStorage.setItem("scrollPosition", window.pageYOffset)
   })
 
   return (
     <div className={styles.root}>
-      <Row justify={'center'}>
+      <Row justify={"center"}>
         <Col span={15}>
           <div className="team_container">
-            <Title titleText={'Principle Investigators'} />
-            {showData[0].map((item, index) => (
-              <Teacher teacherData={item} key={index} type={0} />
-            ))}
+            <Title titleText={"Principle Investigators"} />
+            <div className="teacher_content">
+              {showData[0].map((item, index) => (
+                // <Teacher teacherData={item} key={index} type={0} />
+                <Link
+                  style={{ color: "black" }}
+                  to="/teacherDetail"
+                  className="avatar"
+                  state={{ key: item.key, type: 0 }}
+                >
+                  <div className="teacher_item" key={index}>
+                    <img
+                      className="teacher_photo"
+                      src={item.photo}
+                      alt=""
+                      srcset=""
+                    />
+                    <div className="name1">{item.name}</div>
+                    <div className="name2">{item.title}</div>
+                    <div className="email">email: {item.Email}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
             <div className="margin" style={{ height: 114 }}></div>
-            <Title titleText={'Team Members'} style={{ marginTop: 30 }} />
+            <Title titleText={"Team Members"} style={{ marginTop: 30 }} />
 
             <div className="member_type_phd">Ph.D</div>
             <div className="member_content">

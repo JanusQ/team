@@ -1,39 +1,39 @@
-import React, { useState, useEffect } from 'react'
-import { Layout, Row, Col } from 'antd'
-import styles from './index.module.scss'
-import { Link } from 'react-router-dom'
-import logo from '@/assets/logo_wite.png'
-import { useLangStore } from '@/store/lang'
-import codeimae from '@/assets/image/footer/code.png'
+import React, { useState, useEffect } from "react"
+import { Layout, Row, Col } from "antd"
+import styles from "./index.module.scss"
+import { Link } from "react-router-dom"
+import logo from "@/assets/logo_wite.png"
+import { useLangStore } from "@/store/lang"
+import codeimae from "@/assets/image/footer/code.png"
 export default function Footer() {
   const { lang } = useLangStore()
 
   const { Footer } = Layout
   const footerStyle = {
-    textAlign: 'center',
-    color: '#fff',
-    backgroundColor: '#333333',
-    padding: '86px 144px 93px 144px',
+    textAlign: "center",
+    color: "#fff",
+    backgroundColor: "#333333",
+    padding: "86px 144px 93px 144px",
     // borderTopRightRadius: 50,
     // borderTopLeftRadius: 50,
   }
   const footerTextZh = [
-    '常用连接',
-    '浙江大学计算机学院',
-    '浙江大学',
-    '版权所有&copy;浙江大学量子计算',
-    '保留一切权利',
+    "常用连接",
+    "浙江大学计算机学院",
+    "浙江大学",
+    "版权所有&copy;浙江大学量子计算",
+    "保留一切权利",
   ]
   const footerTextEn = [
-    'Common links',
-    'School of Computer Science, Zhejiang University',
-    'Zhejiang University',
-    'Copyright &copy;Quantum Computing, Zhejiang University',
-    'All rights reserved',
+    "Common links",
+    "School of Computer Science, Zhejiang University",
+    "Zhejiang University",
+    "Copyright &copy;Quantum Computing, Zhejiang University",
+    "All rights reserved",
   ]
   const [footerText, setFooterText] = useState(footerTextZh)
   useEffect(() => {
-    if (lang === 'zh') {
+    if (lang === "zh") {
       setFooterText(footerTextZh)
     } else {
       setFooterText(footerTextEn)
@@ -61,9 +61,9 @@ export default function Footer() {
                 <div className="footer_Link">
                   <p className="footer_Link_title">{footerText[0]}</p>
                   <Link
-                    style={{ color: '#1a1b1f' }}
+                    style={{ color: "#1a1b1f" }}
                     to="/teacherDetail"
-                    state={{ key: 'Jianwei Yin', type: 0 }}
+                    state={{ key: "Jianwei Yin", type: 0 }}
                   >
                     <p>Jianwei Yin</p>
                   </Link>
@@ -90,8 +90,11 @@ export default function Footer() {
       </Footer>
       <Row justify="center" className="bottom-bar">
         <Col>
-          <span style={{ marginRight: 12 }}>{footerText[3]}</span>
-          <span style={{ marginRight: 12 }}> {footerText[4]}</span>
+          <span style={{ marginRight: 12 }}>Copyright ©</span>
+          <span style={{ marginRight: 12 }}>
+            North Garden, Xixi Campus, Zhejiang University, Hangzhou, Zhejiang,
+            China
+          </span>
         </Col>
       </Row>
     </div>
